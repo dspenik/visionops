@@ -1,0 +1,19 @@
+baseURL = 'https://visionops.cz/'
+languageCode = 'cs'
+title = 'VisionOps - Kubernetes & OpenShift Experts'
+theme = 'visionops'
+
+[params]
+  description = "Profesionální služby v oblasti Kubernetes, OpenShift, CI/CD a monitoringu. Pomůžeme vám s migrací a provozem cloudových platforem."
+  author = "VisionOps"
+  email = "info@visionops.cz"
+
+# Single landing page - no menu needed
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,12 @@
+name = "VisionOps"
+license = "MIT"
+licenselink = ""
+description = "Custom modern theme for VisionOps"
+homepage = "https://visionops.cz"
+tags = ["business", "kubernetes", "modern", "gradient"]
+features = ["responsive", "modern", "animations"]
+min_version = "0.112.0"
+
+[author]
+  name = "VisionOps"
+  homepage = "https://visionops.cz"
