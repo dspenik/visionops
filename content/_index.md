@@ -47,8 +47,8 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <h3>Migrace</h3>
 <p>Bezpečný přesun aplikací s minimálním downtime.</p>
 <ul class="service-features">
-<li>VMware → Kubernetes</li>
-<li>Proxmox → Cloud</li>
+<li>VMware → Proxmox</li>
+<li>VMware → Bare-metal</li>
 <li>On-prem ↔ Cloud</li>
 </ul>
 </div>
@@ -204,8 +204,7 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <div class="tech-badges">
 <span>Kubernetes</span>
 <span>OpenShift</span>
-<span>Rancher</span>
-<span>EKS/AKS/GKE</span>
+<span>AKS</span>
 </div>
 </div>
 
@@ -213,7 +212,6 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <h4>CI/CD</h4>
 <div class="tech-badges">
 <span>ArgoCD</span>
-<span>Flux</span>
 <span>Jenkins</span>
 <span>Tekton</span>
 <span>GitLab CI</span>
@@ -239,7 +237,6 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <span>Terraform</span>
 <span>Ansible</span>
 <span>Helm</span>
-<span>Istio</span>
 <span>Vault</span>
 <span>Trivy</span>
 </div>
