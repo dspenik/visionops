@@ -13,6 +13,10 @@ theme = 'visionops'
 [outputs]
   home = ["HTML", "RSS"]
 
+# Disable unused taxonomies
+[taxonomies]
+  # empty - no categories or tags
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
