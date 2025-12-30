@@ -41,13 +41,27 @@
     {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        "name": "{{ .Site.Title }}",
+        "name": "VisionOps",
+        "alternateName": "{{ .Site.Title }}",
         "description": "{{ .Site.Params.description }}",
         "url": "{{ .Site.BaseURL }}",
+        "logo": "{{ .Site.BaseURL }}images/og-image.png",
+        "image": "{{ .Site.BaseURL }}images/og-image.png",
         "email": "{{ .Site.Params.email }}",
-        "areaServed": "CZ",
-        "serviceType": ["Kubernetes Consulting", "OpenShift Consulting", "DevOps", "CI/CD", "Cloud Migration"],
-        "knowsAbout": ["Kubernetes", "OpenShift", "ArgoCD", "Prometheus", "Grafana", "Terraform", "Ansible"]
+        "areaServed": {
+            "@type": "Country",
+            "name": "Czech Republic"
+        },
+        "serviceType": ["Kubernetes Consulting", "OpenShift Consulting", "DevOps", "CI/CD", "Cloud Migration", "Infrastructure Monitoring"],
+        "knowsAbout": ["Kubernetes", "OpenShift", "ArgoCD", "Prometheus", "Grafana", "Terraform", "Ansible", "Jenkins", "GitLab CI"],
+        "priceRange": "$$",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "{{ .Site.Params.email }}",
+            "contactType": "sales",
+            "availableLanguage": ["Czech", "English"]
+        },
+        "sameAs": []
     }
     </script>
 </head>

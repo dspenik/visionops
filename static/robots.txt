@@ -1,0 +1,10 @@
+# robots.txt for visionops.cz
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://visionops.cz/sitemap.xml
+
+# Crawl-delay (optional, be nice to server)
+Crawl-delay: 1
