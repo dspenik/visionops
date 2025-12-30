@@ -1,10 +1,10 @@
 baseURL = 'https://visionops.cz/'
 languageCode = 'cs'
-title = 'VisionOps - Kubernetes & OpenShift Experts'
+title = 'VisionOps - Kubernetes konzultace a DevOps služby'
 theme = 'visionops'
 
 [params]
-  description = "Profesionální služby v oblasti Kubernetes, OpenShift, CI/CD a monitoringu. Pomůžeme vám s migrací a provozem cloudových platforem."
+  description = "Kubernetes konzultace a OpenShift implementace v České republice. DevOps služby pro firmy - CI/CD automatizace, migrace do cloudu, monitoring infrastruktury."
   author = "VisionOps"
   email = "info@visionops.cz"
 

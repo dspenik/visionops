@@ -1,18 +1,18 @@
 ---
-title: "VisionOps - Kubernetes & OpenShift Experts"
+title: "VisionOps - Kubernetes konzultace a DevOps služby"
 ---
 
 <section class="hero-section">
 <div class="hero-logo">VisionOps</div>
 <div class="hero-content">
-<h1 class="hero-title">Moderní IT infrastruktura<br/>bez kompromisů</h1>
-<p class="hero-subtitle">Kubernetes • OpenShift • CI/CD • Monitoring</p>
-<a href="#services" class="cta-button">Co děláme →</a>
+<h1 class="hero-title">Kubernetes konzultace<br/>a DevOps služby pro firmy</h1>
+<p class="hero-subtitle">Kontejnerová řešení • OpenShift • CI/CD automatizace • Monitoring</p>
+<a href="#services" class="cta-button">Naše služby →</a>
 </div>
 </section>
 
 <section id="services" class="services-section">
-<h2 class="section-title-dark">Co děláme jinak</h2>
+<h2 class="section-title-dark">Kubernetes a DevOps služby</h2>
 
 <div class="services-grid">
 <div class="service-card service-primary">
@@ -27,12 +27,12 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <line x1="28" y1="50" x2="72" y2="50" stroke="currentColor" stroke-width="2"/>
 </svg>
 </div>
-<h3>Kubernetes & OpenShift</h3>
-<p>Produkční clustery s HA, autoscaling, multi-region. On-prem i cloud (EKS, AKS, GKE).</p>
+<h3>Kubernetes implementace a správa</h3>
+<p>Produkční clustery s vysokou dostupností, autoscaling a multi-region. Kontejnerová řešení on-prem i v cloudu (AKS, OpenShift).</p>
 <ul class="service-features">
-<li>Multi-cluster management</li>
-<li>Security hardening</li>
-<li>Storage & networking</li>
+<li>Kubernetes konzultace a implementace</li>
+<li>OpenShift nasazení a správa</li>
+<li>Security hardening a networking</li>
 </ul>
 </div>
 
@@ -44,12 +44,12 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <path d="M 45 50 L 55 50 M 50 45 L 55 50 L 50 55" stroke="currentColor" stroke-width="2" fill="none"/>
 </svg>
 </div>
-<h3>Migrace</h3>
-<p>Bezpečný přesun aplikací s minimálním downtime.</p>
+<h3>Migrace do cloudu a kontejnerů</h3>
+<p>Bezpečná migrace aplikací s minimálním downtime. Přesun z VMware do moderních kontejnerových platforem.</p>
 <ul class="service-features">
-<li>VMware → Proxmox</li>
-<li>VMware → Bare-metal</li>
-<li>On-prem ↔ Cloud</li>
+<li>VMware → Proxmox virtualizace</li>
+<li>VMware → Bare-metal Kubernetes</li>
+<li>Migrace on-prem ↔ Cloud</li>
 </ul>
 </div>
 
@@ -63,12 +63,12 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <path d="M 20 35 L 50 35 L 80 35" stroke="currentColor" stroke-width="2" fill="none"/>
 </svg>
 </div>
-<h3>CI/CD & GitOps</h3>
-<p>Plně automatizované pipelines od commitu po produkci.</p>
+<h3>CI/CD automatizace a GitOps</h3>
+<p>Plně automatizované CI/CD pipelines od commitu po produkci. DevOps best practices a Infrastructure as Code.</p>
 <ul class="service-features">
-<li>ArgoCD, Tekton, Jenkins</li>
-<li>Canary deployments</li>
-<li>Automated rollbacks</li>
+<li>ArgoCD, Tekton, Jenkins implementace</li>
+<li>GitOps workflow a Canary deployments</li>
+<li>Automatizace nasazení a rollbacků</li>
 </ul>
 </div>
 
@@ -81,12 +81,12 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <polyline points="22.5,60 50,40 77.5,25" fill="none" stroke="currentColor" stroke-width="2"/>
 </svg>
 </div>
-<h3>Monitoring & Observability</h3>
-<p>Kompletní přehled - metrics, logs, traces.</p>
+<h3>Monitoring infrastruktury a observability</h3>
+<p>Kompletní přehled nad infrastrukturou - metriky, logy, traces. Proaktivní monitoring a alerting.</p>
 <ul class="service-features">
-<li>Prometheus + Grafana</li>
-<li>ELK, OpenTelemetry</li>
-<li>Zabbix, Jaeger</li>
+<li>Prometheus + Grafana nasazení</li>
+<li>ELK Stack a OpenTelemetry</li>
+<li>Zabbix monitoring</li>
 </ul>
 </div>
 </div>
@@ -94,24 +94,24 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 
 <section class="intro-section">
 <div class="intro-content">
-<p class="intro-text">VisionOps je tým specialistů, kteří vám pomohou vybudovat, migrovat a spravovat produkční platformy – on-prem i v cloudu.</p>
+<p class="intro-text">VisionOps je tým Kubernetes a OpenShift specialistů v České republice. Pomůžeme vám s implementací kontejnerových řešení, migrací do cloudu a správou produkčních platforem – on-prem i v cloudu. Nabízíme DevOps konzultace a kompletní podporu od návrhu po provoz.</p>
 </div>
 </section>
 
 <section id="why" class="why-section">
-<h2 class="section-title-center">Proč VisionOps</h2>
+<h2 class="section-title-center">Proč zvolit VisionOps</h2>
 
 <div class="why-grid">
 <div class="why-card">
 <span class="why-icon">🎯</span>
-<h3>Expertíza</h3>
+<h3>Kubernetes expertíza</h3>
 <p>Roky praxe s produkčními clustery</p>
 </div>
 
 <div class="why-card">
 <span class="why-icon">🔧</span>
-<h3>Praktičnost</h3>
-<p>Řešení, která opravdu fungují</p>
+<h3>Ověřená řešení</h3>
+<p>DevOps praktiky, které opravdu fungují</p>
 </div>
 
 <div class="why-card">
@@ -131,7 +131,7 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <section id="process" class="process-section">
 <div class="process-header">
 <h2>Jak to funguje</h2>
-<p>Od prvního kontaktu po produkci</p>
+<p>Od prvního kontaktu po produkční nasazení</p>
 </div>
 
 <div class="process-timeline">
@@ -196,7 +196,7 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 </section>
 
 <section id="tech" class="tech-section">
-<h2 class="section-title-light">Technologie</h2>
+<h2 class="section-title-light">Technologie které používáme</h2>
 
 <div class="tech-grid">
 <div class="tech-column">
@@ -247,7 +247,7 @@ title: "VisionOps - Kubernetes & OpenShift Experts"
 <section class="cta-section">
 <div class="cta-content">
 <h2>Připraveni začít?</h2>
-<p>První konzultace zdarma</p>
+<p>Ozvěte se nám a probereme vaše potřeby</p>
 <a href="mailto:info@visionops.cz" class="cta-button-large">info@visionops.cz</a>
 </div>
 </section>
