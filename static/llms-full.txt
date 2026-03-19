@@ -1,0 +1,126 @@
+# VisionOps — Kubernetes Consulting & DevOps Services
+
+> VisionOps is a Kubernetes and DevOps consulting company based in the Czech Republic. We specialize in production Kubernetes cluster implementation, OpenShift administration, cloud migration, CI/CD automation, and infrastructure monitoring. We serve businesses looking for container orchestration expertise, both on-premises and in the cloud.
+
+- Website: https://visionops.cz
+- Contact: info@visionops.cz
+- Location: Czech Republic
+- Languages: Czech, English
+
+---
+
+## About VisionOps
+
+VisionOps is a team of Kubernetes and OpenShift specialists in the Czech Republic. We help businesses implement container orchestration solutions, migrate to the cloud, and manage production platforms — on-premises and in the cloud. We offer DevOps consulting and complete support from design to operations.
+
+### Why Choose VisionOps
+
+- **Kubernetes expertise** — Years of hands-on experience with production clusters
+- **Proven solutions** — DevOps practices that actually work in real-world environments
+- **Knowledge transfer** — We hand over complete know-how to your team
+- **Flexibility** — On-prem, cloud, or hybrid — we adapt to your infrastructure
+
+---
+
+## Services
+
+### 1. Kubernetes Implementation & Management
+
+Production clusters with high availability, autoscaling, and multi-region support. Container solutions on-premises and in the cloud (AKS, OpenShift).
+
+What we deliver:
+- Kubernetes consulting and full cluster implementation
+- OpenShift deployment and ongoing management
+- Security hardening and network configuration
+- High-availability and autoscaling setup
+- Multi-region cluster architecture
+
+### 2. Cloud & Container Migration
+
+Safe application migration with minimal downtime. We move workloads from legacy infrastructure to modern container platforms.
+
+Migration paths we support:
+- VMware to Proxmox virtualization
+- VMware to bare-metal Kubernetes
+- On-premises to cloud migration
+- Cloud to on-premises migration
+- Hybrid infrastructure setup
+
+### 3. CI/CD Automation & GitOps
+
+Fully automated CI/CD pipelines from commit to production. DevOps best practices and Infrastructure as Code.
+
+What we implement:
+- ArgoCD, Tekton, and Jenkins pipelines
+- GitOps workflows with canary deployments
+- Automated deployment and rollback strategies
+- Infrastructure as Code (IaC) practices
+- End-to-end delivery pipeline automation
+
+### 4. Infrastructure Monitoring & Observability
+
+Complete infrastructure visibility — metrics, logs, and traces. Proactive monitoring and alerting for production systems.
+
+Monitoring stack we deploy:
+- Prometheus and Grafana for metrics and dashboards
+- ELK Stack for centralized logging
+- OpenTelemetry for distributed tracing
+- Zabbix for infrastructure monitoring
+- Jaeger for request tracing
+- Custom alerting and incident response
+
+---
+
+## Technology Stack
+
+### Platforms
+- Kubernetes (vanilla, managed, and on-prem)
+- Red Hat OpenShift
+- Azure Kubernetes Service (AKS)
+
+### CI/CD Tools
+- ArgoCD
+- Jenkins
+- Tekton
+- GitLab CI
+- GitHub Actions
+
+### Monitoring & Observability
+- Prometheus
+- Grafana
+- ELK Stack (Elasticsearch, Logstash, Kibana)
+- OpenTelemetry
+- Zabbix
+- Jaeger
+
+### Infrastructure as Code & Security
+- Terraform
+- Ansible
+- Helm
+- HashiCorp Vault
+- Trivy (container security scanning)
+
+---
+
+## How We Work
+
+Our engagement follows a proven 5-step process:
+
+1. **Assessment** — Thorough analysis of your current infrastructure state, identifying bottlenecks, risks, and opportunities for improvement.
+
+2. **Solution Design** — Custom architecture tailored to your specific needs, business requirements, and existing technology stack.
+
+3. **Implementation** — Building the solution using Infrastructure as Code, automation, and industry best practices. No shortcuts.
+
+4. **Knowledge Transfer** — Complete handoff including training sessions, documentation, and operational procedures for your team.
+
+5. **Ongoing Support** — We remain available for consulting and support after go-live, ensuring smooth operations.
+
+---
+
+## Contact
+
+- **Email:** info@visionops.cz
+- **Website:** https://visionops.cz
+- **Area served:** Czech Republic (remote consulting available)
+- **Available languages:** Czech, English

@@ -3,8 +3,31 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://visionops.cz/sitemap.xml
+# AI search crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
 
-# Crawl-delay (optional, be nice to server)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap and LLM content
+Sitemap: https://visionops.cz/sitemap.xml
 Crawl-delay: 1

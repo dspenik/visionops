@@ -30,6 +30,9 @@
     <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
     <meta name="twitter:image:alt" content="VisionOps - Kubernetes a OpenShift specialisté">
 
+    <!-- LLM content discovery -->
+    <link rel="llms-txt" href="/llms.txt" type="text/plain">
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
 
@@ -62,6 +65,64 @@
             "availableLanguage": ["Czech", "English"]
         },
         "sameAs": []
+    }
+    </script>
+
+    <!-- FAQPage Schema for AI search visibility -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Co jsou Kubernetes konzultace a komu jsou určené?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kubernetes konzultace zahrnují návrh, implementaci a správu produkčních Kubernetes clusterů. Jsou určené firmám, které chtějí kontejnerizovat své aplikace, zvýšit dostupnost infrastruktury nebo migrovat z tradičních VM na moderní kontejnerové platformy. VisionOps poskytuje konzultace pro on-prem i cloudová prostředí (AKS, OpenShift)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jak probíhá migrace z VMware do Kubernetes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Migrace začíná důkladnou analýzou současného stavu infrastruktury a aplikací. Následuje návrh cílové architektury, kontejnerizace aplikací a postupný přesun workloadů s minimálním downtime. Podporujeme cesty VMware na Proxmox, VMware na bare-metal Kubernetes i migraci mezi on-prem a cloudem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jaké CI/CD nástroje VisionOps implementuje?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Implementujeme ArgoCD, Tekton, Jenkins, GitLab CI a GitHub Actions. Stavíme plně automatizované CI/CD pipelines od commitu po produkci včetně GitOps workflow, canary deploymentů a automatizovaných rollbacků. Vše s důrazem na Infrastructure as Code a DevOps best practices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Jaký monitoring stack VisionOps nasazuje?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nasazujeme kompletní observability stack: Prometheus a Grafana pro metriky a dashboardy, ELK Stack pro centralizované logování, OpenTelemetry a Jaeger pro distribuované trasování a Zabbix pro monitoring infrastruktury. Součástí je proaktivní alerting a incident response."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Poskytuje VisionOps podporu i po nasazení?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ano. Náš proces zahrnuje 5 kroků: analýza, návrh řešení, implementace, knowledge transfer (školení a dokumentace pro váš tým) a následná podpora. Konzultace jsou dostupné i po go-live, aby byl zajištěn hladký provoz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pracuje VisionOps s on-prem i cloudovými prostředími?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ano, VisionOps je flexibilní a pracuje s on-premises, cloudovými i hybridními prostředími. Podporujeme Kubernetes, OpenShift a Azure Kubernetes Service (AKS). Řešení navrhujeme na míru podle vaší stávající infrastruktury a požadavků."
+                }
+            }
+        ]
     }
     </script>
 </head>
