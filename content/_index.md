@@ -244,6 +244,20 @@ title: "VisionOps - Kubernetes konzultace a DevOps služby"
 </div>
 </section>
 
+<section class="nav-section">
+<div class="nav-section-inner">
+<span class="nav-section-label">Více informací</span>
+<div class="nav-section-links">
+<a href="/sluzby/openshift-konzultace/" class="nav-section-link">OpenShift konzultace</a>
+<a href="/sluzby/proxmox-virtualizace/" class="nav-section-link">Proxmox virtualizace</a>
+<a href="/sluzby/cicd-gitops/" class="nav-section-link">CI/CD a GitOps</a>
+<a href="/sluzby/monitoring-observability/" class="nav-section-link">Monitoring a observability</a>
+<a href="/reference/zentity-openshift-proxmox/" class="nav-section-link">Reference: Zentity</a>
+<a href="/blog/proxmox-vs-vmware-2026/" class="nav-section-link">Blog</a>
+</div>
+</div>
+</section>
+
 <section class="cta-section">
 <div class="cta-content">
 <h2>Připraveni začít?</h2>
