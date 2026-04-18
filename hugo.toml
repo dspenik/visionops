@@ -17,6 +17,11 @@ theme = 'visionops'
 [taxonomies]
   # empty - no categories or tags
 
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
