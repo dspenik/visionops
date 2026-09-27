@@ -24,6 +24,6 @@ keywords: []
 <div class="blog-cta">
 <h3></h3>
 <p></p>
-<a href="mailto:info@visionops.cz" class="cta-button">info@visionops.cz</a>
+<a href="mailto:{{ site.Params.email }}" class="cta-button">{{ site.Params.email }}</a>
 </div>
 </article>

@@ -12,7 +12,7 @@ keywords: []
 {{"{{"}}< breadcrumb >{{"}}"}}
 <h1></h1>
 <p class="lp-hero-sub"></p>
-<a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
+<a href="mailto:{{ site.Params.email }}" class="cta-button">Nezávazná konzultace →</a>
 </div>
 </section>
 
@@ -26,6 +26,6 @@ keywords: []
 <div class="lp-container">
 <h2></h2>
 <p></p>
-<a href="mailto:info@visionops.cz" class="cta-button-large">info@visionops.cz</a>
+<a href="mailto:{{ site.Params.email }}" class="cta-button-large">{{ site.Params.email }}</a>
 </div>
 </section>
