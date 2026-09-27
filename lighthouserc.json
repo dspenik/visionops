@@ -1,0 +1,22 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./public",
+      "numberOfRuns": 1,
+      "maxAutodiscoverUrls": 0,
+      "autodiscoverUrlBlocklist": ["/404.html"],
+      "settings": { "onlyCategories": ["seo", "accessibility", "best-practices"] }
+    },
+    "assert": {
+      "assertions": {
+        "categories:seo": ["error", { "minScore": 1 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci/reports"
+    }
+  }
+}

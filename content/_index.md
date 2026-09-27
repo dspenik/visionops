@@ -1,5 +1,6 @@
 ---
 title: "VisionOps - Kubernetes konzultace a DevOps služby"
+description: "Kubernetes konzultace a OpenShift implementace v České republice. DevOps služby pro firmy - CI/CD automatizace, migrace do cloudu, monitoring infrastruktury."
 ---
 
 <section class="hero-section">

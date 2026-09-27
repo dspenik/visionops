@@ -1,15 +1,15 @@
 baseURL = 'https://visionops.cz/'
-locale = 'cs'
+locale = 'cs-CZ'
 defaultContentLanguage = 'cs'
-title = 'VisionOps - Kubernetes konzultace a DevOps služby'
+title = 'VisionOps'
 theme = 'visionops'
 enableGitInfo = true
 
 [params]
-  brand = "VisionOps"
   description = "Kubernetes konzultace a OpenShift implementace v České republice. DevOps služby pro firmy - CI/CD automatizace, migrace do cloudu, monitoring infrastruktury."
   author = "VisionOps"
   email = "info@visionops.cz"
+  images = ["images/og-image.png"]
   sameAs = []
 
 [outputs]
