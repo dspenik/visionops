@@ -4,6 +4,7 @@ defaultContentLanguage = 'cs'
 title = 'VisionOps'
 theme = 'visionops'
 enableGitInfo = true
+timeZone = 'Europe/Prague'
 
 [params]
   description = "Kubernetes konzultace a OpenShift implementace v České republice. DevOps služby pro firmy - CI/CD automatizace, migrace do cloudu, monitoring infrastruktury."
