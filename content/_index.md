@@ -1,5 +1,6 @@
 ---
 title: "VisionOps - Kubernetes konzultace a DevOps služby"
+lastmod: 2026-09-27
 ---
 
 <section class="hero-section">
