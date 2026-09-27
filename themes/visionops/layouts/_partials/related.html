@@ -1,8 +1,7 @@
-{{- $siblings := where .CurrentSection.RegularPages "Permalink" "ne" .Permalink }}
-{{- with $siblings }}
+{{- with first 3 (site.RegularPages.Related .) }}
 <section class="lp-section lp-dark">
     <div class="lp-container">
-        <h2>{{ if eq $.Section "blog" }}Další články{{ else if eq $.Section "sluzby" }}Další služby{{ else }}Další {{ lower $.CurrentSection.Title }}{{ end }}</h2>
+        <h2>Související obsah</h2>
         <div class="lp-grid-3">
             {{- range . }}
             <article class="lp-card">

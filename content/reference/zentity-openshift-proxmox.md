@@ -3,7 +3,7 @@ title: "Zentity: OpenShift 4.x na Proxmox clusteru"
 description: "Case study: nasazení Proxmox VE clusteru, Proxmox Backup Server, OpenShift 4.x, ArgoCD GitOps, GitLab CE CI, Ansible provisioning a observability stacku s OpenTelemetry a Beyla."
 date: 2026-04-18
 breadcrumb: "Zentity"
-keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "Proxmox OpenShift produkce", "OpenTelemetry Beyla implementace", "ArgoCD GitOps reference", "DevOps implementace Česká republika"]
+keywords: ["openshift", "proxmox", "argocd", "gitops", "gitlab", "ansible", "opentelemetry", "beyla", "observability", "monitoring"]
 ---
 
 <section class="lp-hero cs-hero">
@@ -52,7 +52,7 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 
 <div class="lp-card">
 <h3>1. Proxmox VE cluster + PBS</h3>
-<p>Základem byl návrh a implementace Proxmox Virtual Environment clusteru pro virtualizační vrstvu. Součástí bylo:</p>
+<p>Základem byl návrh a implementace <a href="/sluzby/proxmox-virtualizace/">Proxmox VE clusteru</a> pro virtualizační vrstvu. Zkušenosti shrnuje článek <a href="/blog/proxmox-vs-vmware-2026/">Proxmox vs VMware</a>. Součástí bylo:</p>
 <ul class="lp-list-sm">
 <li>Multi-node Proxmox VE 8.x cluster s Corosync HA</li>
 <li>Ceph distributed storage pro shared VM storage</li>
@@ -64,7 +64,7 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 
 <div class="lp-card">
 <h3>2. OpenShift 4.x produkční cluster</h3>
-<p>Na Proxmox VE byl nasazen produkční OpenShift cluster:</p>
+<p>Na Proxmox VE byl nasazen <a href="/sluzby/openshift-konzultace/">produkční OpenShift cluster</a>:</p>
 <ul class="lp-list-sm">
 <li>Control plane s vysokou dostupností (3 master nody)</li>
 <li>OVN-Kubernetes CNI pro síťové politiky</li>
@@ -75,7 +75,7 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 
 <div class="lp-card">
 <h3>3. ArgoCD GitOps</h3>
-<p>Veškeré nasazení aplikací a konfigurace clusteru přes GitOps workflow:</p>
+<p>Veškeré nasazení aplikací a konfigurace clusteru přes <a href="/sluzby/cicd-gitops/">GitOps workflow s ArgoCD</a>:</p>
 <ul class="lp-list-sm">
 <li>ArgoCD v HA konfiguraci na OpenShift</li>
 <li>App of Apps pattern pro hierarchické řízení aplikací</li>
@@ -111,7 +111,7 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 
 <div class="lp-card">
 <h3>6. Kompletní observability stack</h3>
-<p>Full-stack monitoring pokrývající infrastrukturu, platformu i aplikace:</p>
+<p>Full-stack <a href="/sluzby/monitoring-observability/">monitoring a observability</a> pokrývající infrastrukturu, platformu i aplikace. Postup popisuje článek <a href="/blog/opentelemetry-beyla-monitoring-2026/">OpenTelemetry + Beyla</a>:</p>
 <ul class="lp-list-sm">
 <li>OpenTelemetry Collector jako centrální telemetry pipeline</li>
 <li>Grafana Beyla pro eBPF auto-instrumentaci aplikací</li>

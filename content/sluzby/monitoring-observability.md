@@ -3,7 +3,7 @@ title: "Monitoring infrastruktury a observability"
 description: "Kompletní observability stack: OpenTelemetry, Grafana, Prometheus, Loki, Tempo, Beyla eBPF auto-instrumentace a AI-assisted monitoring. Proaktivní alerting a incident response."
 date: 2026-04-18
 breadcrumb: "Monitoring a observability"
-keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla eBPF monitoring", "observability stack Kubernetes", "monitoring OpenShift", "AI monitoring infrastruktury"]
+keywords: ["monitoring", "observability", "opentelemetry", "beyla", "prometheus", "grafana", "openshift"]
 ---
 
 <section class="lp-hero">
@@ -44,7 +44,7 @@ keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla
 <p>OpenTelemetry Collector jako vendor-neutral pipeline pro metriky, logy a traces. Jeden agent, veškerá telemetrie — bez vendor lock-in. Automatická instrumentace pro Java, Python, Go, Node.js a další jazyky.</p>
 <br/>
 <h3>Beyla — eBPF bez změny kódu</h3>
-<p>Grafana Beyla využívá eBPF technologii pro auto-instrumentaci aplikací bez nutnosti měnit kód nebo restartovat služby. HTTP, gRPC, SQL traces automaticky — ideální pro legacy aplikace bez OpenTelemetry SDK.</p>
+<p>Grafana Beyla využívá eBPF technologii pro auto-instrumentaci aplikací bez nutnosti měnit kód nebo restartovat služby. HTTP, gRPC, SQL traces automaticky — ideální pro legacy aplikace bez OpenTelemetry SDK. Postup krok za krokem popisujeme v článku <a href="/blog/opentelemetry-beyla-monitoring-2026/">OpenTelemetry + Beyla: monitoring bez změny kódu</a>.</p>
 </div>
 <div>
 <div class="lp-tech-stack">

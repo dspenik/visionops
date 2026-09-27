@@ -3,7 +3,7 @@ title: "OpenTelemetry + Beyla: monitoring bez změny kódu"
 description: "Jak nasadit kompletní observability stack v roce 2026 s OpenTelemetry Collector, Grafana Beyla eBPF auto-instrumentací a AI-assisted monitoringem na Kubernetes a OpenShift."
 date: 2026-04-18
 breadcrumb: "OpenTelemetry a Beyla"
-keywords: ["OpenTelemetry 2026", "Grafana Beyla eBPF", "observability Kubernetes 2026", "monitoring bez změny kódu", "eBPF monitoring aplikací", "OpenTelemetry Collector Kubernetes"]
+keywords: ["opentelemetry", "beyla", "ebpf", "observability", "monitoring", "openshift", "kubernetes"]
 ---
 
 <article class="blog-article">
@@ -193,7 +193,7 @@ Prometheus  Loki  Tempo
 
 ## Výsledky z produkce (Zentity)
 
-Po nasazení tohoto stacku na OpenShift cluster pro Zentity:
+Po nasazení tohoto stacku na [OpenShift cluster pro Zentity](/reference/zentity-openshift-proxmox/):
 
 - **Čas do první instrumentace:** 4 hodiny (Beyla DaemonSet deploy + základní dashboardy)
 - **Pokrytí aplikací:** 100% — všechny HTTP/gRPC aplikace bez změny kódu
@@ -204,7 +204,7 @@ Po nasazení tohoto stacku na OpenShift cluster pro Zentity:
 
 Observability stack 2026 je signifikantně přístupnější než před dvěma lety. OpenTelemetry jako standard eliminuje vendor lock-in, Beyla odstraňuje nutnost instrumentace kódu a Grafana LGTM stack poskytuje integrovanou platformu pro všechny tři pilíře observability.
 
-Pro Kubernetes a OpenShift prostředí doporučujeme tento stack jako výchozí bod — je open-source, škálovatelný a pokryje 90% potřeb i největších produkčních prostředí.
+Pro Kubernetes a OpenShift prostředí doporučujeme tento stack jako výchozí bod — je open-source, škálovatelný a pokryje 90% potřeb i největších produkčních prostředí. Co zahrnuje naše [nasazení monitoringu a observability](/sluzby/monitoring-observability/), najdete na stránce služby.
 
 </div>
 

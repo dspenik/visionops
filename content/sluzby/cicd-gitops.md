@@ -3,7 +3,7 @@ title: "CI/CD automatizace a GitOps"
 description: "Implementace ArgoCD, GitLab CI, Tekton a GitHub Actions. Plně automatizované CI/CD pipelines od commitu po produkci s GitOps workflow a Infrastructure as Code."
 date: 2026-04-18
 breadcrumb: "CI/CD a GitOps"
-keywords: ["ArgoCD implementace", "GitOps konzultace", "CI/CD automatizace Kubernetes", "GitLab CI implementace", "Tekton pipelines", "Infrastructure as Code"]
+keywords: ["cicd", "gitops", "argocd", "gitlab", "tekton", "iac", "kubernetes"]
 ---
 
 <section class="lp-hero">
@@ -21,7 +21,7 @@ keywords: ["ArgoCD implementace", "GitOps konzultace", "CI/CD automatizace Kuber
 <div class="lp-grid-3">
 <div class="lp-card">
 <h3>ArgoCD GitOps</h3>
-<p>Nasazení ArgoCD v production-grade konfiguraci. App of Apps pattern, multi-cluster management, SSO integrace, automated sync s konfigurovatelným health checking.</p>
+<p>Nasazení ArgoCD v production-grade konfiguraci. App of Apps pattern, multi-cluster management, SSO integrace, automated sync s konfigurovatelným health checking. Nasazení v praxi ukazuje <a href="/reference/zentity-openshift-proxmox/">case study Zentity</a>.</p>
 </div>
 <div class="lp-card">
 <h3>GitLab CE</h3>

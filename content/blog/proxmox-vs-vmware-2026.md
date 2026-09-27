@@ -3,7 +3,7 @@ title: "Proxmox vs VMware 2026: proč firmy migrují"
 description: "Praktický průvodce migrací z VMware vSphere na Proxmox VE v roce 2026. Porovnání nákladů, funkčnosti a reálné zkušenosti z produkčních nasazení."
 date: 2026-04-18
 breadcrumb: "Proxmox vs VMware"
-keywords: ["Proxmox vs VMware 2026", "migrace VMware Proxmox", "VMware Broadcom cena", "Proxmox VE produkce", "VMware alternativa open source", "Proxmox cluster implementace"]
+keywords: ["proxmox", "vmware", "virtualizace", "migrace", "openshift", "kubernetes"]
 ---
 
 <article class="blog-article">
@@ -56,7 +56,7 @@ Typická úspora pro cluster o 10 nodech: **50 000–200 000 Kč ročně** podle
 
 ## Reálné zkušenosti z produkce
 
-V projektu pro Zentity jsme nasadili Proxmox VE 8.x cluster jako základ pro produkční OpenShift cluster. Klíčové poznatky:
+V [projektu pro Zentity](/reference/zentity-openshift-proxmox/) jsme nasadili Proxmox VE 8.x cluster jako základ pro produkční OpenShift cluster. Klíčové poznatky:
 
 **Co funguje výborně:**
 - Stabilita na par s VMware vSphere — v produkci bez neočekávaných výpadků
@@ -87,13 +87,13 @@ Paralelní provoz obou prostředí, validace funkčnosti aplikací, přepnutí D
 
 Jeden z nejsilnějších argumentů pro Proxmox v roce 2026 je jeho role jako ideálního základu pro Kubernetes nebo OpenShift clustery. Na rozdíl od VMware nevyžaduje drahé add-ony pro integraci — Proxmox API je otevřené, Terraform provider existuje a Ansible moduly jsou zralé.
 
-Architektura kterou nasazujeme: **Proxmox VE → VM nody → OpenShift/Kubernetes cluster → ArgoCD GitOps**. Celý stack je reproducibilní přes Infrastructure as Code od bare-metal po aplikaci.
+Architektura kterou nasazujeme: **Proxmox VE → VM nody → OpenShift/Kubernetes cluster → ArgoCD GitOps**. Podrobnosti k jednotlivým vrstvám najdete u služeb [OpenShift konzultace a implementace](/sluzby/openshift-konzultace/) a [CI/CD automatizace a GitOps](/sluzby/cicd-gitops/). Celý stack je reproducibilní přes Infrastructure as Code od bare-metal po aplikaci.
 
 ## Závěr
 
 Pro firmy s 3–50 fyzickými servery je Proxmox VE v roce 2026 jasnou volbou. Úspora nákladů je reálná, funkčnost je dostatečná pro drtivou většinu produkčních workloadů a ekosystém nástrojů (Ansible, Terraform, Kubernetes integrace) je vyspělý.
 
-Migrace z VMware není triviální, ale je zvladatelná. Klíčem je pečlivé plánování, paralelní provoz a postupný přesun — ne big-bang migrace přes víkend.
+Migrace z VMware není triviální, ale je zvladatelná. Klíčem je pečlivé plánování, paralelní provoz a postupný přesun — ne big-bang migrace přes víkend. Co obnáší naše [implementace Proxmox VE a migrace z VMware](/sluzby/proxmox-virtualizace/), popisujeme na stránce služby.
 
 </div>
 

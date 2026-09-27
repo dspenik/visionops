@@ -3,7 +3,7 @@ title: "Proxmox VE virtualizace — migrace z VMware"
 description: "Implementace Proxmox Virtual Environment clusteru s Proxmox Backup Server. Migrace z VMware vSphere na open-source virtualizaci bez vendor lock-in."
 date: 2026-04-18
 breadcrumb: "Proxmox virtualizace"
-keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox", "Proxmox Backup Server", "virtualizace on-premise", "VMware alternativa"]
+keywords: ["proxmox", "vmware", "virtualizace", "migrace", "ceph", "openshift"]
 ---
 
 <section class="lp-hero">
@@ -41,7 +41,7 @@ keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox
 </div>
 <div class="lp-card">
 <h3>Kubernetes na Proxmox</h3>
-<p>Proxmox jako foundation pro Kubernetes nebo OpenShift clustery. VM-based Kubernetes nodes s automatizovaným provisioningem přes Ansible nebo Terraform.</p>
+<p>Proxmox jako foundation pro Kubernetes nebo OpenShift clustery. VM-based Kubernetes nodes s automatizovaným provisioningem přes Ansible nebo Terraform. Na tuto vrstvu navazuje <a href="/sluzby/openshift-konzultace/">implementace OpenShiftu</a>.</p>
 </div>
 </div>
 </div>
@@ -53,7 +53,7 @@ keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox
 <div class="lp-grid-2">
 <div>
 <ul class="lp-list">
-<li><strong>Dramatické snížení nákladů</strong> — po akvizici Broadcomem zdražily VMware licence 3–10x. Proxmox VE je open-source, platí se jen volitelná podpora</li>
+<li><strong>Dramatické snížení nákladů</strong> — po akvizici Broadcomem zdražily VMware licence 3–10x. Proxmox VE je open-source, platí se jen volitelná podpora. Podrobné srovnání přináší článek <a href="/blog/proxmox-vs-vmware-2026/">Proxmox vs VMware: proč firmy migrují</a></li>
 <li><strong>Žádný vendor lock-in</strong> — standardní KVM hypervisor, kompatibilní s existujícími nástroji (Terraform, Ansible, Packer)</li>
 <li><strong>Aktivní vývoj</strong> — Proxmox VE 9.x rozšiřuje SDN a přidává dynamický load balancing přes Cluster Resource Scheduler</li>
 <li><strong>Plná enterprise funkčnost</strong> — HA clustering, live migration, snapshoty, replikace, integrovaný firewall a zálohovací server</li>

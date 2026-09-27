@@ -2042,3 +2042,10 @@ footer {
   color: inherit;
   text-decoration: none;
 }
+
+/* Inline links in page content */
+.content-page :is(p, li) > a:not([class]) {
+  color: var(--pink-400);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

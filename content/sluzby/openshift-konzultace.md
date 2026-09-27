@@ -3,7 +3,7 @@ title: "OpenShift konzultace a implementace"
 description: "Profesionální nasazení Red Hat OpenShift on-premise i v cloudu. Implementace produkčních clusterů, ArgoCD GitOps, CI/CD pipelines a kompletní observability stack."
 date: 2026-04-18
 breadcrumb: "OpenShift konzultace"
-keywords: ["OpenShift konzultace", "OpenShift implementace", "Red Hat OpenShift", "OpenShift on-premise", "OpenShift Česká republika", "Kubernetes konzultace"]
+keywords: ["openshift", "kubernetes", "argocd", "gitops", "proxmox", "observability"]
 ---
 
 <section class="lp-hero">
@@ -25,11 +25,11 @@ keywords: ["OpenShift konzultace", "OpenShift implementace", "Red Hat OpenShift"
 </div>
 <div class="lp-card">
 <h3>Instalace a konfigurace</h3>
-<p>Full-stack instalace OpenShift na bare-metal nebo Proxmox, konfigurace identity provideru, RBAC, síťových politik a image registry.</p>
+<p>Full-stack instalace OpenShift na bare-metal nebo <a href="/sluzby/proxmox-virtualizace/">Proxmox VE cluster</a>, konfigurace identity provideru, RBAC, síťových politik a image registry.</p>
 </div>
 <div class="lp-card">
 <h3>GitOps s ArgoCD</h3>
-<p>Nasazení ArgoCD, nastavení App of Apps patternu, synchronizace aplikací z Git repozitářů, canary a blue-green deployment strategie.</p>
+<p>Nasazení ArgoCD, nastavení App of Apps patternu, synchronizace aplikací z Git repozitářů, canary a blue-green deployment strategie. Více u služby <a href="/sluzby/cicd-gitops/">CI/CD automatizace a GitOps</a>.</p>
 </div>
 <div class="lp-card">
 <h3>CI/CD pipelines</h3>
@@ -41,7 +41,7 @@ keywords: ["OpenShift konzultace", "OpenShift implementace", "Red Hat OpenShift"
 </div>
 <div class="lp-card">
 <h3>Observability stack</h3>
-<p>OpenTelemetry Collector, Prometheus + Grafana, Loki pro logy, Jaeger/Tempo pro traces, Beyla pro eBPF auto-instrumentaci aplikací.</p>
+<p>OpenTelemetry Collector, Prometheus + Grafana, Loki pro logy, Jaeger/Tempo pro traces, Beyla pro eBPF auto-instrumentaci aplikací. Více u služby <a href="/sluzby/monitoring-observability/">monitoring a observability</a>.</p>
 </div>
 </div>
 </div>
