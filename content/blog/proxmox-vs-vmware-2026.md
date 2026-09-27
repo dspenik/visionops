@@ -52,8 +52,6 @@ Proxmox VE 9.x přináší funkčnost srovnatelnou s VMware vSphere:
 | Funkce HA | Vyžaduje higher tier | Zdarma ve všech verzích |
 | vSAN / Ceph | Drahý add-on | Ceph integrován zdarma |
 
-Typická úspora pro cluster o 10 nodech: **50 000–200 000 Kč ročně** podle původní VMware edice.
-
 ## Reálné zkušenosti z produkce
 
 V [projektu pro Zentity](/reference/zentity-openshift-proxmox/) jsme nasadili Proxmox VE 8.x cluster jako základ pro produkční OpenShift cluster. Klíčové poznatky:
