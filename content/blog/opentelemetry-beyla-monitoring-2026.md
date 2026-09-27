@@ -191,14 +191,9 @@ Prometheus  Loki  Tempo
   Alertmanager → PagerDuty / Slack
 ```
 
-## Výsledky z produkce (Zentity)
+## Nasazení v praxi (Zentity)
 
-Po nasazení tohoto stacku na [OpenShift cluster pro Zentity](/reference/zentity-openshift-proxmox/):
-
-- **Čas do první instrumentace:** 4 hodiny (Beyla DaemonSet deploy + základní dashboardy)
-- **Pokrytí aplikací:** 100% — všechny HTTP/gRPC aplikace bez změny kódu
-- **Redukce alert fatigue:** ~60% méně false positive alertů oproti statickým thresholdům
-- **MTTR (Mean Time to Resolution):** zkráceno průměrně o 40% díky korelaci traces + logů v Grafaně
+Tento stack provozujeme na [OpenShift clusteru pro Zentity](/reference/zentity-openshift-proxmox/). Beyla instrumentuje HTTP a gRPC aplikace bez změny kódu a traces jsou v Grafaně korelované s logy a metrikami.
 
 ## Závěr
 
