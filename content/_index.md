@@ -86,7 +86,7 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 <p>Kompletní přehled nad infrastrukturou - metriky, logy, traces. Proaktivní monitoring a alerting.</p>
 <ul class="service-features">
 <li>Prometheus + Grafana nasazení</li>
-<li>ELK Stack a OpenTelemetry</li>
+<li>Loki, Tempo a OpenTelemetry</li>
 <li>Zabbix monitoring</li>
 </ul>
 </div>
@@ -225,7 +225,8 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 <div class="tech-badges">
 <span>Prometheus</span>
 <span>Grafana</span>
-<span>ELK Stack</span>
+<span>Loki</span>
+<span>Tempo</span>
 <span>OpenTelemetry</span>
 <span>Zabbix</span>
 <span>Jaeger</span>

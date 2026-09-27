@@ -5,7 +5,7 @@
 - question: "Jaké CI/CD nástroje VisionOps implementuje?"
   answer: "Implementujeme ArgoCD, Tekton, Jenkins, GitLab CI a GitHub Actions. Stavíme plně automatizované CI/CD pipelines od commitu po produkci včetně GitOps workflow, canary deploymentů a automatizovaných rollbacků. Vše s důrazem na Infrastructure as Code a DevOps best practices."
 - question: "Jaký monitoring stack VisionOps nasazuje?"
-  answer: "Nasazujeme kompletní observability stack: Prometheus a Grafana pro metriky a dashboardy, ELK Stack pro centralizované logování, OpenTelemetry a Jaeger pro distribuované trasování a Zabbix pro monitoring infrastruktury. Součástí je proaktivní alerting a incident response."
+  answer: "Nasazujeme kompletní observability stack: Prometheus a Grafana pro metriky a dashboardy, Grafana Loki pro centralizované logování, OpenTelemetry s Grafana Tempo nebo Jaeger pro distribuované trasování, Grafana Beyla pro eBPF auto-instrumentaci bez změny kódu a Zabbix pro monitoring infrastruktury. Součástí je proaktivní alerting a incident response."
 - question: "Poskytuje VisionOps podporu i po nasazení?"
   answer: "Ano. Náš proces zahrnuje 5 kroků: analýza, návrh řešení, implementace, knowledge transfer (školení a dokumentace pro váš tým) a následná podpora. Konzultace jsou dostupné i po go-live, aby byl zajištěn hladký provoz."
 - question: "Pracuje VisionOps s on-prem i cloudovými prostředími?"

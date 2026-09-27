@@ -9,16 +9,16 @@
 
 ## Services
 
-- [Kubernetes Implementation & Management](https://visionops.cz/sluzby/openshift-konzultace/): Production clusters with high availability, autoscaling, and multi-region. On-prem and cloud (AKS, OpenShift). Includes consulting, deployment, security hardening, and networking.
-- [Proxmox Virtualization & VMware Migration](https://visionops.cz/sluzby/proxmox-virtualizace/): Safe application migration with minimal downtime. VMware to Proxmox, VMware to bare-metal Kubernetes, on-prem to cloud and back.
-- [CI/CD Automation & GitOps](https://visionops.cz/sluzby/cicd-gitops/): Fully automated pipelines from commit to production. ArgoCD, Tekton, Jenkins, GitOps workflows, canary deployments, automated rollbacks.
-- [Infrastructure Monitoring & Observability](https://visionops.cz/sluzby/monitoring-observability/): Complete infrastructure visibility — metrics, logs, traces. Prometheus, Grafana, ELK Stack, OpenTelemetry, Zabbix, Jaeger.
+- [OpenShift & Kubernetes Consulting](https://visionops.cz/sluzby/openshift-konzultace/): Production Red Hat OpenShift and Kubernetes clusters on-prem (bare metal, Proxmox) and in the cloud. Architecture, installation, GitOps with ArgoCD, CI/CD, security hardening, observability.
+- [Proxmox VE & VMware Migration](https://visionops.cz/sluzby/proxmox-virtualizace/): Proxmox VE clusters with Ceph and Proxmox Backup Server, migration from VMware vSphere with minimal downtime, Proxmox as a foundation for OpenShift/Kubernetes.
+- [CI/CD Automation & GitOps](https://visionops.cz/sluzby/cicd-gitops/): Automated pipelines from commit to production. ArgoCD, GitLab CI, Tekton, GitHub Actions, Infrastructure as Code, canary deployments, supply chain security.
+- [Monitoring & Observability](https://visionops.cz/sluzby/monitoring-observability/): Metrics, logs and traces with OpenTelemetry, Prometheus, Grafana, Loki, Tempo, Grafana Beyla (eBPF) and Zabbix.
 
 ## Technology Stack
 
-- Platforms: Kubernetes, OpenShift, AKS
+- Platforms: Kubernetes, OpenShift, AKS, Proxmox VE
 - CI/CD: ArgoCD, Jenkins, Tekton, GitLab CI, GitHub Actions
-- Monitoring: Prometheus, Grafana, ELK Stack, OpenTelemetry, Zabbix, Jaeger
+- Monitoring: Prometheus, Grafana, Loki, Tempo, OpenTelemetry, Grafana Beyla, Zabbix, Jaeger
 - IaC & Security: Terraform, Ansible, Helm, Vault, Trivy
 
 ## Engagement Process
@@ -31,7 +31,7 @@
 
 ## Case Studies
 
-- [Zentity: OpenShift on Proxmox](https://visionops.cz/reference/zentity-openshift-proxmox/): Production OpenShift cluster on a Proxmox VE platform
+- [Zentity: OpenShift on Proxmox](https://visionops.cz/reference/zentity-openshift-proxmox/): Proxmox VE cluster with PBS, production OpenShift 4.x, ArgoCD GitOps, GitLab CE, Ansible provisioning and an OpenTelemetry observability stack
 
 ## Blog
 

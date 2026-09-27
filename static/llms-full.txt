@@ -24,81 +24,92 @@ VisionOps is a team of Kubernetes and OpenShift specialists in the Czech Republi
 
 ## Services
 
-### 1. Kubernetes Implementation & Management
+### 1. OpenShift & Kubernetes Consulting
+https://visionops.cz/sluzby/openshift-konzultace/
 
-Production clusters with high availability, autoscaling, and multi-region support. Container solutions on-premises and in the cloud (AKS, OpenShift).
+Production Red Hat OpenShift and Kubernetes clusters on-premises (bare metal, Proxmox) and in the cloud (Azure Red Hat OpenShift, AKS), from architecture to handover.
 
 What we deliver:
-- Kubernetes consulting and full cluster implementation
-- OpenShift deployment and ongoing management
-- Security hardening and network configuration
-- High-availability and autoscaling setup
-- Multi-region cluster architecture
+- Architecture design: cluster topology, node sizing, OVN-Kubernetes networking, storage and high availability
+- Installation and configuration: identity provider, RBAC, network policies, image registry
+- GitOps with ArgoCD (App of Apps pattern)
+- CI/CD pipelines with GitLab CE, GitHub Actions and Tekton
+- Security hardening: SecurityContextConstraints, OPA Gatekeeper, Trivy image scanning, Vault
+- Observability: OpenTelemetry Collector, Prometheus, Grafana, Loki, Tempo/Jaeger, Grafana Beyla
 
-### 2. Cloud & Container Migration
+### 2. Proxmox VE Virtualization & VMware Migration
+https://visionops.cz/sluzby/proxmox-virtualizace/
 
-Safe application migration with minimal downtime. We move workloads from legacy infrastructure to modern container platforms.
+Open-source enterprise virtualization without license fees, and planned migration away from VMware vSphere/ESXi.
 
-Migration paths we support:
-- VMware to Proxmox virtualization
-- VMware to bare-metal Kubernetes
-- On-premises to cloud migration
-- Cloud to on-premises migration
-- Hybrid infrastructure setup
+What we deliver:
+- Highly available Proxmox VE clusters (Corosync, Ceph, NFS or iSCSI shared storage, VLANs)
+- Proxmox Backup Server with deduplicated backups, retention and off-site replication
+- VMware to Proxmox migration with minimal downtime
+- Network design: bridges, bonds, VLANs, Open vSwitch, cluster firewall
+- Proxmox as a foundation for OpenShift/Kubernetes, provisioned with Ansible or Terraform
 
 ### 3. CI/CD Automation & GitOps
+https://visionops.cz/sluzby/cicd-gitops/
 
-Fully automated CI/CD pipelines from commit to production. DevOps best practices and Infrastructure as Code.
+Automated delivery from commit to production with Git as the single source of truth.
 
 What we implement:
-- ArgoCD, Tekton, and Jenkins pipelines
-- GitOps workflows with canary deployments
-- Automated deployment and rollback strategies
-- Infrastructure as Code (IaC) practices
-- End-to-end delivery pipeline automation
+- ArgoCD in production-grade configuration (App of Apps, multi-cluster, SSO)
+- Self-hosted GitLab CE with CI runners and registries
+- Tekton pipelines, Triggers and Chains
+- Infrastructure as Code with Ansible, Terraform and Helm
+- Blue-green and canary deployments with automated rollbacks
+- Pipeline security: Trivy/Grype scanning, SAST, secret scanning, SBOM, Cosign signing
 
-### 4. Infrastructure Monitoring & Observability
+### 4. Monitoring & Observability
+https://visionops.cz/sluzby/monitoring-observability/
 
-Complete infrastructure visibility — metrics, logs, and traces. Proactive monitoring and alerting for production systems.
+Metrics, logs and traces across infrastructure, platform and applications.
 
 Monitoring stack we deploy:
-- Prometheus and Grafana for metrics and dashboards
-- ELK Stack for centralized logging
-- OpenTelemetry for distributed tracing
-- Zabbix for infrastructure monitoring
-- Jaeger for request tracing
-- Custom alerting and incident response
+- Prometheus, Alertmanager and Grafana; Thanos or Grafana Mimir for long-term storage
+- Grafana Loki for logs, shipped by Grafana Alloy or OpenTelemetry Collector
+- Grafana Tempo or Jaeger for distributed tracing
+- OpenTelemetry Collector as a vendor-neutral telemetry pipeline
+- Grafana Beyla (OpenTelemetry eBPF Instrumentation) for instrumentation without code changes
+- Zabbix for low-level infrastructure monitoring
+- Anomaly detection and SLO-based alerting
+
+---
+
+## Case Study
+
+### Zentity: OpenShift on Proxmox
+https://visionops.cz/reference/zentity-openshift-proxmox/
+
+Proxmox VE cluster with Ceph and Proxmox Backup Server as the virtualization layer for a production OpenShift 4.x cluster. Delivered with ArgoCD GitOps, self-hosted GitLab CE CI, Ansible provisioning and a full observability stack (OpenTelemetry Collector, Grafana Beyla, Prometheus, Grafana, Loki, Tempo, Zabbix).
+
+---
+
+## Blog (Czech)
+
+- Proxmox vs VMware 2026: why companies migrate — https://visionops.cz/blog/proxmox-vs-vmware-2026/
+  Cost comparison, Proxmox VE features, production experience and a four-phase migration plan.
+- OpenTelemetry + Beyla: monitoring without code changes — https://visionops.cz/blog/opentelemetry-beyla-monitoring-2026/
+  OpenTelemetry Collector on Kubernetes, Grafana Beyla eBPF auto-instrumentation on OpenShift, anomaly alerting.
 
 ---
 
 ## Technology Stack
 
 ### Platforms
-- Kubernetes (vanilla, managed, and on-prem)
-- Red Hat OpenShift
-- Azure Kubernetes Service (AKS)
+- Kubernetes, Red Hat OpenShift, Azure Kubernetes Service (AKS)
+- Proxmox VE, Ceph, Proxmox Backup Server
 
-### CI/CD Tools
-- ArgoCD
-- Jenkins
-- Tekton
-- GitLab CI
-- GitHub Actions
+### CI/CD
+- ArgoCD, GitLab CI, Tekton, GitHub Actions, Jenkins
 
 ### Monitoring & Observability
-- Prometheus
-- Grafana
-- ELK Stack (Elasticsearch, Logstash, Kibana)
-- OpenTelemetry
-- Zabbix
-- Jaeger
+- Prometheus, Grafana, Loki, Tempo, OpenTelemetry, Grafana Beyla, Zabbix, Jaeger
 
 ### Infrastructure as Code & Security
-- Terraform
-- Ansible
-- Helm
-- HashiCorp Vault
-- Trivy (container security scanning)
+- Terraform, Ansible, Helm, HashiCorp Vault, Trivy
 
 ---
 
