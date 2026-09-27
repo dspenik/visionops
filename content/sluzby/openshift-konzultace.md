@@ -2,13 +2,13 @@
 title: "OpenShift konzultace a implementace"
 description: "Profesionální nasazení Red Hat OpenShift on-premise i v cloudu. Implementace produkčních clusterů, ArgoCD GitOps, CI/CD pipelines a kompletní observability stack."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "OpenShift konzultace"
 keywords: ["OpenShift konzultace", "OpenShift implementace", "Red Hat OpenShift", "OpenShift on-premise", "OpenShift Česká republika", "Kubernetes konzultace"]
 ---
 
 <section class="lp-hero">
 <div class="lp-hero-content">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Služby / OpenShift konzultace</div>
+{{< breadcrumb >}}
 <h1>OpenShift konzultace<br/>a implementace</h1>
 <p class="lp-hero-sub">Produkční Red Hat OpenShift clustery on-premise i v cloudu. Od návrhu architektury po předání provozu.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>

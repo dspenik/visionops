@@ -30,4 +30,3 @@ Allow: /
 
 # Sitemap and LLM content
 Sitemap: https://visionops.cz/sitemap.xml
-Crawl-delay: 1

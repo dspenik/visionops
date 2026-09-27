@@ -2,13 +2,13 @@
 title: "Monitoring infrastruktury a observability"
 description: "Kompletní observability stack pro 2026: OpenTelemetry, Grafana, Prometheus, Loki, Tempo, Beyla eBPF auto-instrumentace a AI-assisted monitoring. Proaktivní alerting a incident response."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "Monitoring a observability"
 keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla eBPF monitoring", "observability stack Kubernetes", "monitoring OpenShift", "AI monitoring infrastruktury"]
 ---
 
 <section class="lp-hero">
 <div class="lp-hero-content">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Služby / Monitoring a observability</div>
+{{< breadcrumb >}}
 <h1>Monitoring infrastruktury<br/>a observability 2026</h1>
 <p class="lp-hero-sub">Kompletní přehled nad celým stackem — metriky, logy, traces, profiling. OpenTelemetry, Beyla eBPF a AI-assisted monitoring jako nový standard.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>

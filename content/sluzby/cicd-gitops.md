@@ -2,13 +2,13 @@
 title: "CI/CD automatizace a GitOps"
 description: "Implementace ArgoCD, GitLab CI, Tekton a GitHub Actions. Plně automatizované CI/CD pipelines od commitu po produkci s GitOps workflow a Infrastructure as Code."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "CI/CD a GitOps"
 keywords: ["ArgoCD implementace", "GitOps konzultace", "CI/CD automatizace Kubernetes", "GitLab CI implementace", "Tekton pipelines", "Infrastructure as Code"]
 ---
 
 <section class="lp-hero">
 <div class="lp-hero-content">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Služby / CI/CD a GitOps</div>
+{{< breadcrumb >}}
 <h1>CI/CD automatizace<br/>a GitOps</h1>
 <p class="lp-hero-sub">Od commitu po produkci plně automatizovaně. ArgoCD, GitLab CI, Tekton a Infrastructure as Code jako základ moderního DevOps.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>

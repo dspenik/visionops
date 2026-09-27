@@ -1,14 +1,14 @@
 ---
-title: "Proxmox vs VMware v roce 2026: proč firmy migrují a jak na to"
+title: "Proxmox vs VMware 2026: proč firmy migrují"
 description: "Praktický průvodce migrací z VMware vSphere na Proxmox VE v roce 2026. Porovnání nákladů, funkčnosti a reálné zkušenosti z produkčních nasazení."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "Proxmox vs VMware"
 keywords: ["Proxmox vs VMware 2026", "migrace VMware Proxmox", "VMware Broadcom cena", "Proxmox VE produkce", "VMware alternativa open source", "Proxmox cluster implementace"]
 ---
 
 <article class="blog-article">
 <div class="blog-header">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Blog</div>
+{{< breadcrumb >}}
 <div class="blog-meta">18. dubna 2026 · 8 min čtení</div>
 <h1>Proxmox vs VMware v roce 2026:<br/>proč firmy migrují a jak na to</h1>
 <p class="blog-perex">Po akvizici VMware firmou Broadcom v roce 2023 se ceny licencí dramaticky změnily. V roce 2026 je migrace na Proxmox VE pro mnoho firem nejen ekonomicky výhodná — je nevyhnutelná. Přinášíme praktický pohled z reálných nasazení.</p>

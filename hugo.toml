@@ -1,26 +1,22 @@
 baseURL = 'https://visionops.cz/'
-languageCode = 'cs'
+locale = 'cs'
+defaultContentLanguage = 'cs'
 title = 'VisionOps - Kubernetes konzultace a DevOps služby'
 theme = 'visionops'
+enableGitInfo = true
 
 [params]
+  brand = "VisionOps"
   description = "Kubernetes konzultace a OpenShift implementace v České republice. DevOps služby pro firmy - CI/CD automatizace, migrace do cloudu, monitoring infrastruktury."
   author = "VisionOps"
   email = "info@visionops.cz"
-
-# Single landing page - no menu needed
+  sameAs = []
 
 [outputs]
   home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
 
-# Disable unused taxonomies
 [taxonomies]
-  # empty - no categories or tags
-
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
 
 [markup]
   [markup.goldmark]

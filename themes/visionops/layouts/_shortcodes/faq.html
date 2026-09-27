@@ -1,7 +1,7 @@
 <section id="faq" class="lp-section faq-section">
 <div class="lp-container">
 <h2>Časté dotazy</h2>
-{{- range site.Data.faq }}
+{{- range hugo.Data.faq }}
 <details class="faq-item">
 <summary>{{ .question }}</summary>
 <p>{{ .answer }}</p>

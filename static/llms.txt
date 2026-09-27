@@ -9,10 +9,10 @@
 
 ## Services
 
-- [Kubernetes Implementation & Management](https://visionops.cz/#services): Production clusters with high availability, autoscaling, and multi-region. On-prem and cloud (AKS, OpenShift). Includes consulting, deployment, security hardening, and networking.
-- [Cloud & Container Migration](https://visionops.cz/#services): Safe application migration with minimal downtime. VMware to Proxmox, VMware to bare-metal Kubernetes, on-prem to cloud and back.
-- [CI/CD Automation & GitOps](https://visionops.cz/#services): Fully automated pipelines from commit to production. ArgoCD, Tekton, Jenkins, GitOps workflows, canary deployments, automated rollbacks.
-- [Infrastructure Monitoring & Observability](https://visionops.cz/#services): Complete infrastructure visibility — metrics, logs, traces. Prometheus, Grafana, ELK Stack, OpenTelemetry, Zabbix, Jaeger.
+- [Kubernetes Implementation & Management](https://visionops.cz/sluzby/openshift-konzultace/): Production clusters with high availability, autoscaling, and multi-region. On-prem and cloud (AKS, OpenShift). Includes consulting, deployment, security hardening, and networking.
+- [Proxmox Virtualization & VMware Migration](https://visionops.cz/sluzby/proxmox-virtualizace/): Safe application migration with minimal downtime. VMware to Proxmox, VMware to bare-metal Kubernetes, on-prem to cloud and back.
+- [CI/CD Automation & GitOps](https://visionops.cz/sluzby/cicd-gitops/): Fully automated pipelines from commit to production. ArgoCD, Tekton, Jenkins, GitOps workflows, canary deployments, automated rollbacks.
+- [Infrastructure Monitoring & Observability](https://visionops.cz/sluzby/monitoring-observability/): Complete infrastructure visibility — metrics, logs, traces. Prometheus, Grafana, ELK Stack, OpenTelemetry, Zabbix, Jaeger.
 
 ## Technology Stack
 
@@ -28,6 +28,15 @@
 3. Implementation — Infrastructure as Code, automation, best practices
 4. Knowledge transfer — training, documentation, complete handoff
 5. Ongoing support — consulting available after go-live
+
+## Case Studies
+
+- [Zentity: OpenShift on Proxmox](https://visionops.cz/reference/zentity-openshift-proxmox/): Production OpenShift cluster on a Proxmox VE platform
+
+## Blog
+
+- [Proxmox vs VMware in 2026](https://visionops.cz/blog/proxmox-vs-vmware-2026/): Practical guide to migrating from VMware vSphere to Proxmox VE (Czech)
+- [OpenTelemetry and Beyla monitoring](https://visionops.cz/blog/opentelemetry-beyla-monitoring-2026/): eBPF-based observability with OpenTelemetry and Grafana Beyla (Czech)
 
 ## Optional
 

@@ -1,7 +1,6 @@
-{{ define "title" }}{{ .Title }} | VisionOps{{ end }}
-
 {{ define "main" }}
 <main class="content-page">
     {{ .Content }}
 </main>
+{{ partial "related.html" . }}
 {{ end }}

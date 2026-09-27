@@ -1,14 +1,14 @@
 ---
-title: "OpenTelemetry + Beyla: monitoring bez změny kódu v roce 2026"
+title: "OpenTelemetry + Beyla: monitoring bez změny kódu"
 description: "Jak nasadit kompletní observability stack v roce 2026 s OpenTelemetry Collector, Grafana Beyla eBPF auto-instrumentací a AI-assisted monitoringem na Kubernetes a OpenShift."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "OpenTelemetry a Beyla"
 keywords: ["OpenTelemetry 2026", "Grafana Beyla eBPF", "observability Kubernetes 2026", "monitoring bez změny kódu", "eBPF monitoring aplikací", "OpenTelemetry Collector Kubernetes"]
 ---
 
 <article class="blog-article">
 <div class="blog-header">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Blog</div>
+{{< breadcrumb >}}
 <div class="blog-meta">18. dubna 2026 · 10 min čtení</div>
 <h1>OpenTelemetry + Beyla:<br/>monitoring bez změny kódu v roce 2026</h1>
 <p class="blog-perex">Největší překážka nasazení observability byl vždy požadavek na instrumentaci kódu. Grafana Beyla mění pravidla hry — eBPF auto-instrumentace přináší traces, metriky a logy z jakékoli aplikace bez jediného řádku změn. Přinášíme praktický návod na kompletní observability stack 2026.</p>

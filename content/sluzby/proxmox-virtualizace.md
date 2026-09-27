@@ -2,13 +2,13 @@
 title: "Proxmox VE virtualizace — migrace z VMware"
 description: "Implementace Proxmox Virtual Environment clusteru s Proxmox Backup Server. Migrace z VMware vSphere na open-source virtualizaci bez vendor lock-in."
 date: 2026-04-18
-lastmod: 2026-04-18
+breadcrumb: "Proxmox virtualizace"
 keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox", "Proxmox Backup Server", "virtualizace on-premise", "VMware alternativa"]
 ---
 
 <section class="lp-hero">
 <div class="lp-hero-content">
-<div class="lp-breadcrumb"><a href="/">VisionOps</a> / Služby / Proxmox virtualizace</div>
+{{< breadcrumb >}}
 <h1>Proxmox VE cluster<br/>a migrace z VMware</h1>
 <p class="lp-hero-sub">Open-source enterprise virtualizace bez licenčních poplatků. Kompletní implementace Proxmox clusteru s vysokou dostupností a zálohováním.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
