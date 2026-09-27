@@ -2,6 +2,9 @@
 
 Hugo site deployed to GitHub Pages by `.github/workflows/hugo.yml`.
 
+Requires Hugo 0.158.0 or newer (`min_version` in `themes/visionops/theme.toml`); CI pins the exact version.
+Contact e-mail for templates and archetypes is `params.email` in `hugo.toml`.
+
 ## New content
 
 ```sh
