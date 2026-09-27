@@ -25,7 +25,7 @@ keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla
 </div>
 <div class="lp-card">
 <h3>Logy</h3>
-<p>Grafana Loki jako cost-effective alternativa k ELK stacku. Structured logging, LogQL dotazy, korelace logů s metrikami v Grafaně. Promtail nebo OpenTelemetry Collector jako log shipper.</p>
+<p>Grafana Loki jako cost-effective alternativa k ELK stacku. Structured logging, LogQL dotazy, korelace logů s metrikami v Grafaně. Grafana Alloy nebo OpenTelemetry Collector jako log shipper.</p>
 </div>
 <div class="lp-card">
 <h3>Traces</h3>

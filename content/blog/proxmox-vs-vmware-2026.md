@@ -24,7 +24,7 @@ Výsledkem je masivní zájem o alternativy. Proxmox VE — open-source hypervis
 
 ## Co Proxmox VE nabízí v roce 2026
 
-Proxmox VE 8.x přináší funkčnost srovnatelnou s VMware vSphere:
+Proxmox VE 9.x přináší funkčnost srovnatelnou s VMware vSphere:
 
 **Virtualizace a kontejnery**
 - KVM pro plnou virtualizaci (Windows, Linux, BSD)
@@ -48,7 +48,7 @@ Proxmox VE 8.x přináší funkčnost srovnatelnou s VMware vSphere:
 | Položka | VMware vSphere | Proxmox VE |
 |---------|---------------|------------|
 | Licence | Roční předplatné, tisíce € / CPU | Open-source, zdarma |
-| Podpora | Zahrnuta v ceně | Volitelná: od 119 €/rok/node |
+| Podpora | Zahrnuta v ceně | Volitelná, za CPU socket: od 120 €/rok (Community), produkční od 370 €/rok |
 | Funkce HA | Vyžaduje higher tier | Zdarma ve všech verzích |
 | vSAN / Ceph | Drahý add-on | Ceph integrován zdarma |
 
@@ -66,7 +66,7 @@ V projektu pro Zentity jsme nasadili Proxmox VE 8.x cluster jako základ pro pro
 
 **Na co si dát pozor:**
 - Proxmox nemá ekvivalent vCenter pro centralizovaný management tisíců hostů — pro velké enterprise s 100+ nody je management komplexnější
-- Live migration vyžaduje shared storage (Ceph, NFS, iSCSI) — při local storage migraci je nutný downtime
+- Live migrace s lokálními disky je možná, ale kopíruje celé disky po síti a trvá výrazně déle — pro rychlé přesuny a HA počítejte se shared storage (Ceph, NFS, iSCSI)
 - Dokumentace je dobrá, ale komunita je menší než VMware — u exotických edge cases hledáte řešení déle
 
 ## Jak migrace vypadá v praxi

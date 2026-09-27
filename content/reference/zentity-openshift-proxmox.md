@@ -64,10 +64,9 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 
 <div class="lp-card">
 <h3>2. OpenShift 4.x produkční cluster</h3>
-<p>Na Proxmox VE byl nasazen produkční OpenShift cluster v IPI (Installer-Provisioned Infrastructure) konfiguraci:</p>
+<p>Na Proxmox VE byl nasazen produkční OpenShift cluster:</p>
 <ul class="lp-list-sm">
 <li>Control plane s vysokou dostupností (3 master nody)</li>
-<li>Worker nody s autoscaling konfigurací</li>
 <li>OVN-Kubernetes CNI pro síťové politiky</li>
 <li>Integrovaný image registry a OAuth provider</li>
 <li>TLS certifikáty přes cert-manager a Let's Encrypt</li>

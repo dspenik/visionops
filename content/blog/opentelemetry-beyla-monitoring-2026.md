@@ -11,7 +11,7 @@ keywords: ["OpenTelemetry 2026", "Grafana Beyla eBPF", "observability Kubernetes
 {{< breadcrumb >}}
 <div class="blog-meta">18. dubna 2026 · 10 min čtení</div>
 <h1>OpenTelemetry + Beyla:<br/>monitoring bez změny kódu v roce 2026</h1>
-<p class="blog-perex">Největší překážka nasazení observability byl vždy požadavek na instrumentaci kódu. Grafana Beyla mění pravidla hry — eBPF auto-instrumentace přináší traces, metriky a logy z jakékoli aplikace bez jediného řádku změn. Přinášíme praktický návod na kompletní observability stack 2026.</p>
+<p class="blog-perex">Největší překážka nasazení observability byl vždy požadavek na instrumentaci kódu. Grafana Beyla mění pravidla hry — eBPF auto-instrumentace přináší traces a RED metriky z jakékoli aplikace bez jediného řádku změn. Přinášíme praktický návod na kompletní observability stack 2026.</p>
 </div>
 
 <div class="blog-content">
@@ -33,13 +33,13 @@ OpenTelemetry Collector je páteří moderního observability stacku. Funguje ja
 ### Deployment na Kubernetes
 
 ```yaml
-apiVersion: opentelemetry.io/v1alpha1
+apiVersion: opentelemetry.io/v1beta1
 kind: OpenTelemetryCollector
 metadata:
   name: otel-collector
 spec:
   mode: DaemonSet
-  config: |
+  config:
     receivers:
       otlp:
         protocols:
@@ -61,8 +61,8 @@ spec:
     exporters:
       prometheusremotewrite:
         endpoint: http://prometheus:9090/api/v1/write
-      loki:
-        endpoint: http://loki:3100/loki/api/v1/push
+      otlphttp/loki:
+        endpoint: http://loki:3100/otlp
       otlp/tempo:
         endpoint: http://tempo:4317
     service:
@@ -74,7 +74,7 @@ spec:
         logs:
           receivers: [otlp]
           processors: [batch]
-          exporters: [loki]
+          exporters: [otlphttp/loki]
         traces:
           receivers: [otlp]
           processors: [batch]
@@ -84,6 +84,8 @@ spec:
 ## Grafana Beyla: eBPF auto-instrumentace
 
 Beyla je revoluce v aplikačním monitoringu. Využívá eBPF (extended Berkeley Packet Filter) pro interceptování síťových volání na úrovni kernelu — bez agenta v aplikaci, bez změn kódu, bez restartu.
+
+Jádro Beyly Grafana v roce 2025 darovala projektu OpenTelemetry, kde pokračuje jako OpenTelemetry eBPF Instrumentation (OBI). Beyla zůstává distribucí OBI od Grafany, takže postup níže platí pro obě varianty.
 
 ### Co Beyla monitoruje automaticky
 

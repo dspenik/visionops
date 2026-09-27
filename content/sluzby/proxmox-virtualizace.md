@@ -55,7 +55,7 @@ keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox
 <ul class="lp-list">
 <li><strong>Dramatické snížení nákladů</strong> — po akvizici Broadcomem zdražily VMware licence 3–10x. Proxmox VE je open-source, platí se jen volitelná podpora</li>
 <li><strong>Žádný vendor lock-in</strong> — standardní KVM hypervisor, kompatibilní s existujícími nástroji (Terraform, Ansible, Packer)</li>
-<li><strong>Aktivní vývoj</strong> — Proxmox VE 8.x přináší vylepšený Ceph, SDN, software-defined networking a lepší HA management</li>
+<li><strong>Aktivní vývoj</strong> — Proxmox VE 9.x rozšiřuje SDN a přidává dynamický load balancing přes Cluster Resource Scheduler</li>
 <li><strong>Plná enterprise funkčnost</strong> — HA clustering, live migration, snapshoty, replikace, integrovaný firewall a zálohovací server</li>
 <li><strong>Ideální základ pro OpenShift/Kubernetes</strong> — ověřená kombinace Proxmox + OpenShift v produkčních prostředích</li>
 </ul>
@@ -64,7 +64,7 @@ keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox
 <div class="lp-tech-stack">
 <h3>Technologie</h3>
 <div class="tech-badges">
-<span>Proxmox VE 8.x</span>
+<span>Proxmox VE 9.x</span>
 <span>Proxmox Backup Server</span>
 <span>Ceph</span>
 <span>KVM/QEMU</span>
