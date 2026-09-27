@@ -3,6 +3,17 @@
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": {{ printf "%s#website" site.Home.Permalink }},
+    "name": {{ site.Title }},
+    "url": {{ site.Home.Permalink }},
+    "inLanguage": "cs",
+    "publisher": { "@id": {{ $orgID }} }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
     "@type": "Organization",
     "@id": {{ $orgID }},
     "name": {{ site.Title }},
@@ -50,7 +61,7 @@
         {
             "@type": "ListItem",
             "position": {{ add $i 1 }},
-            "name": {{ cond $p.IsHome site.Title $p.Title }},
+            "name": {{ cond $p.IsHome site.Title ($p.Params.breadcrumb | default $p.LinkTitle) }},
             "item": {{ $p.Permalink }}
         }
         {{- end }}

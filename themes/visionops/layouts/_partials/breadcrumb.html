@@ -1,6 +1,6 @@
 <nav class="lp-breadcrumb" aria-label="Drobečková navigace">
     {{- range .Ancestors.Reverse }}
-    <a href="{{ .RelPermalink }}">{{ cond .IsHome site.Title .Title }}</a> /
+    <a href="{{ .RelPermalink }}">{{ cond .IsHome site.Title .LinkTitle }}</a> /
     {{- end }}
-    <span aria-current="page">{{ .Params.breadcrumb | default .Title }}</span>
+    <span aria-current="page">{{ .Params.breadcrumb | default .LinkTitle }}</span>
 </nav>
