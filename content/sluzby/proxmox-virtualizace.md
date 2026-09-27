@@ -88,7 +88,7 @@ keywords: ["proxmox", "vmware", "virtualizace", "migrace", "ceph", "openshift"]
 <h3>Zentity — Proxmox cluster jako základ pro OpenShift</h3>
 <span class="lp-ref-tag">Case Study</span>
 </div>
-<p>Nasazení Proxmox VE clusteru s Proxmox Backup Server jako virtualizační platformy pro produkční OpenShift cluster. Implementace zahrnovala síťovou segmentaci, HA konfiguraci a plnou integraci s OpenShift installerem.</p>
+<p>Nasazení Proxmox VE clusteru s Proxmox Backup Server jako virtualizační platformy pro produkční OpenShift cluster. Implementace zahrnovala síťovou segmentaci, HA konfiguraci a instalaci OpenShiftu přes Agent-based Installer.</p>
 <a href="/reference/zentity-openshift-proxmox/" class="lp-link">Číst case study →</a>
 </div>
 </div>

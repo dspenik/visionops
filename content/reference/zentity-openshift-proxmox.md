@@ -64,7 +64,7 @@ keywords: ["openshift", "proxmox", "argocd", "gitops", "gitlab", "ansible", "ope
 
 <div class="lp-card">
 <h3>2. OpenShift 4.x produkční cluster</h3>
-<p>Na Proxmox VE byl nasazen <a href="/sluzby/openshift-konzultace/">produkční OpenShift cluster</a>:</p>
+<p>Na Proxmox VE byl nasazen <a href="/sluzby/openshift-konzultace/">produkční OpenShift cluster</a> instalovaný přes Agent-based Installer:</p>
 <ul class="lp-list-sm">
 <li>Control plane s vysokou dostupností (3 master nody)</li>
 <li>OVN-Kubernetes CNI pro síťové politiky</li>

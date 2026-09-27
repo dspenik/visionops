@@ -83,7 +83,7 @@ Monitoring stack we deploy:
 ### Zentity: OpenShift on Proxmox
 https://visionops.cz/reference/zentity-openshift-proxmox/
 
-Proxmox VE cluster with Ceph and Proxmox Backup Server as the virtualization layer for a production OpenShift 4.x cluster. Delivered with ArgoCD GitOps, self-hosted GitLab CE CI, Ansible provisioning and a full observability stack (OpenTelemetry Collector, Grafana Beyla, Prometheus, Grafana, Loki, Tempo, Zabbix).
+Proxmox VE cluster with Ceph and Proxmox Backup Server as the virtualization layer for a production OpenShift 4.x cluster installed with the Agent-based Installer. Delivered with ArgoCD GitOps, self-hosted GitLab CE CI, Ansible provisioning and a full observability stack (OpenTelemetry Collector, Grafana Beyla, Prometheus, Grafana, Loki, Tempo, Zabbix).
 
 ---
 
