@@ -1,11 +1,7 @@
-{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} | VisionOps{{ end }}
 
 {{ define "main" }}
-<div class="page-header">
-    <h1>{{ .Title }}</h1>
-</div>
-
-<div class="content-page">
+<main class="content-page">
     {{ .Content }}
-</div>
+</main>
 {{ end }}

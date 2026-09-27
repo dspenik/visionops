@@ -244,6 +244,8 @@ title: "VisionOps - Kubernetes konzultace a DevOps služby"
 </div>
 </section>
 
+{{< faq >}}
+
 <section class="nav-section">
 <div class="nav-section-inner">
 <span class="nav-section-label">Více informací</span>
@@ -253,7 +255,7 @@ title: "VisionOps - Kubernetes konzultace a DevOps služby"
 <a href="/sluzby/cicd-gitops/" class="nav-section-link">CI/CD a GitOps</a>
 <a href="/sluzby/monitoring-observability/" class="nav-section-link">Monitoring a observability</a>
 <a href="/reference/zentity-openshift-proxmox/" class="nav-section-link">Reference: Zentity</a>
-<a href="/blog/proxmox-vs-vmware-2026/" class="nav-section-link">Blog</a>
+<a href="/blog/" class="nav-section-link">Blog</a>
 </div>
 </div>
 </section>

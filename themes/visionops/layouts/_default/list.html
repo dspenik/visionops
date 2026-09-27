@@ -1,13 +1,29 @@
-{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} | VisionOps{{ end }}
 
 {{ define "main" }}
-<div class="page-header">
-    <h1>{{ .Title }}</h1>
-</div>
-
 <main>
-    <div class="content-page">
-        {{ .Content }}
-    </div>
+    <section class="lp-hero">
+        <div class="lp-hero-content">
+            <div class="lp-breadcrumb"><a href="/">VisionOps</a> / {{ .Title }}</div>
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p class="lp-hero-sub">{{ . }}</p>{{ end }}
+        </div>
+    </section>
+
+    {{ with .Content }}<div class="content-page">{{ . }}</div>{{ end }}
+
+    <section class="lp-section">
+        <div class="lp-container">
+            <div class="lp-grid-2">
+                {{ range .Pages.ByDate.Reverse }}
+                <article class="lp-card">
+                    <h2 class="lp-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+                    <a href="{{ .RelPermalink }}" class="lp-link">Číst dál →</a>
+                </article>
+                {{ end }}
+            </div>
+        </div>
+    </section>
 </main>
 {{ end }}

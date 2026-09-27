@@ -2002,3 +2002,43 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* List pages */
+.lp-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.lp-card-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.lp-card-title a:hover {
+  color: var(--pink-400);
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 1.25rem 0;
+}
+
+.faq-item summary {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-item p {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
+.footer-links a,
+.footer-services a {
+  color: inherit;
+  text-decoration: none;
+}

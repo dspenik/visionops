@@ -1,0 +1,11 @@
+<section id="faq" class="lp-section faq-section">
+<div class="lp-container">
+<h2>Časté dotazy</h2>
+{{- range site.Data.faq }}
+<details class="faq-item">
+<summary>{{ .question }}</summary>
+<p>{{ .answer }}</p>
+</details>
+{{- end }}
+</div>
+</section>

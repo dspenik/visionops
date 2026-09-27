@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
+    {{- $description := .Description | default .Site.Params.description }}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="description" content="{{ $description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="robots" content="index, follow">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
@@ -12,21 +13,21 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:title" content="{{ .Title | default .Site.Title }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:description" content="{{ $description }}">
     <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="cs_CZ">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:site_name" content="VisionOps">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ .Permalink }}">
     <meta name="twitter:title" content="{{ .Title | default .Site.Title }}">
-    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:description" content="{{ $description }}">
     <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
     <meta name="twitter:image:alt" content="VisionOps - Kubernetes a OpenShift specialisté">
 
@@ -68,63 +69,39 @@
     }
     </script>
 
-    <!-- FAQPage Schema for AI search visibility -->
+    {{- if .IsHome }}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
+            {{- range $i, $f := site.Data.faq }}{{ if $i }},{{ end }}
             {
                 "@type": "Question",
-                "name": "Co jsou Kubernetes konzultace a komu jsou určené?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kubernetes konzultace zahrnují návrh, implementaci a správu produkčních Kubernetes clusterů. Jsou určené firmám, které chtějí kontejnerizovat své aplikace, zvýšit dostupnost infrastruktury nebo migrovat z tradičních VM na moderní kontejnerové platformy. VisionOps poskytuje konzultace pro on-prem i cloudová prostředí (AKS, OpenShift)."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Jak probíhá migrace z VMware do Kubernetes?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Migrace začíná důkladnou analýzou současného stavu infrastruktury a aplikací. Následuje návrh cílové architektury, kontejnerizace aplikací a postupný přesun workloadů s minimálním downtime. Podporujeme cesty VMware na Proxmox, VMware na bare-metal Kubernetes i migraci mezi on-prem a cloudem."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Jaké CI/CD nástroje VisionOps implementuje?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Implementujeme ArgoCD, Tekton, Jenkins, GitLab CI a GitHub Actions. Stavíme plně automatizované CI/CD pipelines od commitu po produkci včetně GitOps workflow, canary deploymentů a automatizovaných rollbacků. Vše s důrazem na Infrastructure as Code a DevOps best practices."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Jaký monitoring stack VisionOps nasazuje?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Nasazujeme kompletní observability stack: Prometheus a Grafana pro metriky a dashboardy, ELK Stack pro centralizované logování, OpenTelemetry a Jaeger pro distribuované trasování a Zabbix pro monitoring infrastruktury. Součástí je proaktivní alerting a incident response."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Poskytuje VisionOps podporu i po nasazení?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ano. Náš proces zahrnuje 5 kroků: analýza, návrh řešení, implementace, knowledge transfer (školení a dokumentace pro váš tým) a následná podpora. Konzultace jsou dostupné i po go-live, aby byl zajištěn hladký provoz."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Pracuje VisionOps s on-prem i cloudovými prostředími?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ano, VisionOps je flexibilní a pracuje s on-premises, cloudovými i hybridními prostředími. Podporujeme Kubernetes, OpenShift a Azure Kubernetes Service (AKS). Řešení navrhujeme na míru podle vaší stávající infrastruktury a požadavků."
-                }
+                "name": {{ $f.question | jsonify }},
+                "acceptedAnswer": { "@type": "Answer", "text": {{ $f.answer | jsonify }} }
             }
+            {{- end }}
         ]
     }
     </script>
+    {{- else if and .IsPage (eq .Section "blog") }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ .Title | jsonify }},
+        "description": {{ $description | jsonify }},
+        "url": {{ .Permalink | jsonify }},
+        "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
+        "dateModified": {{ .Lastmod.Format "2006-01-02" | jsonify }},
+        "inLanguage": "cs",
+        "image": "{{ .Site.BaseURL }}images/og-image.png",
+        "author": { "@type": "Organization", "name": "VisionOps", "url": "{{ .Site.BaseURL }}" },
+        "publisher": { "@type": "Organization", "name": "VisionOps", "url": "{{ .Site.BaseURL }}" }
+    }
+    </script>
+    {{- end }}
 </head>
 <body>
     {{ partial "header.html" . }}
