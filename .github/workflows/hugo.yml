@@ -64,3 +64,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    runs-on: ubuntu-latest
+    needs: deploy
+    env:
+      INDEXNOW_KEY: 95e5a46ac9be7d901aa789a509e26048
+      SITE: https://visionops.cz
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        run: |
+          for i in {1..12}; do curl -fsS "$SITE/$INDEXNOW_KEY.txt" >/dev/null && break; sleep 10; done
+          urls=$(curl -fsS "$SITE/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' | jq -R . | jq -sc .)
+          body=$(jq -nc --arg host "${SITE#https://}" --arg key "$INDEXNOW_KEY" \
+            --arg loc "$SITE/$INDEXNOW_KEY.txt" --argjson urls "$urls" \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: $urls}')
+          code=$(curl -sS -o /dev/stderr -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "IndexNow response: $code"
+          [[ "$code" == 200 || "$code" == 202 ]]
