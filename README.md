@@ -18,7 +18,7 @@ Fill in `title` (max ~50 chars), `description`, `breadcrumb`, `keywords`, then r
 
 Every push and pull request:
 
-1. `hugo --panicOnWarning`
+1. `hugo build --panicOnWarning`
 2. [lychee](https://github.com/lycheeverse/lychee-action) checks internal links
 3. [Lighthouse CI](https://github.com/treosh/lighthouse-ci-action) requires SEO score 100 on every page (`lighthouserc.json`)
 
@@ -26,8 +26,10 @@ On `master` the site is deployed and pages changed in the last day are submitted
 [IndexNow](https://github.com/bojieyang/indexnow-action) (Bing, Seznam, Yandex, DuckDuckGo via Bing).
 Google reads `sitemap.xml` from `robots.txt`; indexing status is in Search Console.
 
+Dependabot (`.github/dependabot.yml`) opens weekly PRs for GitHub Actions updates; `HUGO_VERSION` in the workflow is bumped manually.
+
 Local check:
 
 ```sh
-hugo --gc --minify --panicOnWarning && npx @lhci/cli autorun
+hugo build --gc --minify --panicOnWarning && npx @lhci/cli autorun
 ```
