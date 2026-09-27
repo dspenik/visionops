@@ -17,6 +17,12 @@ timeZone = 'Europe/Prague'
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
 
+[[cascade]]
+  outputs = ['html']
+  [cascade.target]
+    kind = 'section'
+    path = '{/sluzby,/reference}'
+
 [taxonomies]
 
 [markup]
