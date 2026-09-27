@@ -201,7 +201,7 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 
 <div class="tech-grid">
 <div class="tech-column">
-<h4>Platformy</h4>
+<h3>Platformy</h3>
 <div class="tech-badges">
 <span>Kubernetes</span>
 <span>OpenShift</span>
@@ -210,7 +210,7 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 </div>
 
 <div class="tech-column">
-<h4>CI/CD</h4>
+<h3>CI/CD</h3>
 <div class="tech-badges">
 <span>ArgoCD</span>
 <span>Jenkins</span>
@@ -221,7 +221,7 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 </div>
 
 <div class="tech-column">
-<h4>Monitoring</h4>
+<h3>Monitoring</h3>
 <div class="tech-badges">
 <span>Prometheus</span>
 <span>Grafana</span>
@@ -234,7 +234,7 @@ description: "Kubernetes konzultace a OpenShift implementace v České republice
 </div>
 
 <div class="tech-column">
-<h4>IaC & Security</h4>
+<h3>IaC & Security</h3>
 <div class="tech-badges">
 <span>Terraform</span>
 <span>Ansible</span>

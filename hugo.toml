@@ -19,6 +19,8 @@ enableGitInfo = true
 [taxonomies]
 
 [markup]
+  [markup.highlight]
+    style = 'modus-vivendi'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
