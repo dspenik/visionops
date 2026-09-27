@@ -1,6 +1,6 @@
 ---
 title: "Monitoring infrastruktury a observability"
-description: "Kompletní observability stack pro 2026: OpenTelemetry, Grafana, Prometheus, Loki, Tempo, Beyla eBPF auto-instrumentace a AI-assisted monitoring. Proaktivní alerting a incident response."
+description: "Kompletní observability stack: OpenTelemetry, Grafana, Prometheus, Loki, Tempo, Beyla eBPF auto-instrumentace a AI-assisted monitoring. Proaktivní alerting a incident response."
 date: 2026-04-18
 breadcrumb: "Monitoring a observability"
 keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla eBPF monitoring", "observability stack Kubernetes", "monitoring OpenShift", "AI monitoring infrastruktury"]
@@ -9,7 +9,7 @@ keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla
 <section class="lp-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
-<h1>Monitoring infrastruktury<br/>a observability 2026</h1>
+<h1>Monitoring infrastruktury<br/>a observability</h1>
 <p class="lp-hero-sub">Kompletní přehled nad celým stackem — metriky, logy, traces, profiling. OpenTelemetry, Beyla eBPF a AI-assisted monitoring jako nový standard.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
 </div>
@@ -37,7 +37,7 @@ keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla
 
 <section class="lp-section lp-dark">
 <div class="lp-container">
-<h2>OpenTelemetry 2026 + Beyla eBPF</h2>
+<h2>OpenTelemetry + Beyla eBPF</h2>
 <div class="lp-grid-2">
 <div>
 <h3>OpenTelemetry jako standard</h3>
@@ -99,7 +99,7 @@ keywords: ["OpenTelemetry implementace", "Grafana Prometheus monitoring", "Beyla
 <h3>Zentity — kompletní observability stack na OpenShift</h3>
 <span class="lp-ref-tag">Case Study</span>
 </div>
-<p>Nasazení plného OTEL 2026 stacku na OpenShift clusteru: OpenTelemetry Collector, Grafana Beyla pro eBPF auto-instrumentaci, Prometheus, Grafana, Loki, Tempo a AI-assisted monitoring. Výsledkem je kompletní viditelnost infrastruktury i aplikací bez nutnosti měnit kód.</p>
+<p>Nasazení kompletního OpenTelemetry stacku na OpenShift clusteru: OpenTelemetry Collector, Grafana Beyla pro eBPF auto-instrumentaci, Prometheus, Grafana, Loki, Tempo a AI-assisted monitoring. Výsledkem je kompletní viditelnost infrastruktury i aplikací bez nutnosti měnit kód.</p>
 <a href="/reference/zentity-openshift-proxmox/" class="lp-link">Číst case study →</a>
 </div>
 </div>

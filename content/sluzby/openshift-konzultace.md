@@ -88,7 +88,7 @@ keywords: ["OpenShift konzultace", "OpenShift implementace", "Red Hat OpenShift"
 <h3>Zentity — OpenShift na Proxmox clusteru</h3>
 <span class="lp-ref-tag">Case Study</span>
 </div>
-<p>Kompletní nasazení OpenShift 4.x na Proxmox virtualizační platformě. Implementace zahrnovala ArgoCD GitOps, přípravu GitLab CE CI pipeline, Ansible provisioning infrastruktury a plný observability stack (OpenTelemetry 2026, Beyla eBPF, aplikační a AI monitoring).</p>
+<p>Kompletní nasazení OpenShift 4.x na Proxmox virtualizační platformě. Implementace zahrnovala ArgoCD GitOps, přípravu GitLab CE CI pipeline, Ansible provisioning infrastruktury a plný observability stack (OpenTelemetry, Beyla eBPF, aplikační a AI monitoring).</p>
 <a href="/reference/zentity-openshift-proxmox/" class="lp-link">Číst case study →</a>
 </div>
 </div>

@@ -1,6 +1,6 @@
 ---
 title: "Zentity: OpenShift 4.x na Proxmox clusteru"
-description: "Case study: nasazení Proxmox VE clusteru, Proxmox Backup Server, OpenShift 4.x, ArgoCD GitOps, GitLab CE CI, Ansible provisioning a kompletního OTEL 2026 + Beyla monitoring stacku."
+description: "Case study: nasazení Proxmox VE clusteru, Proxmox Backup Server, OpenShift 4.x, ArgoCD GitOps, GitLab CE CI, Ansible provisioning a observability stacku s OpenTelemetry a Beyla."
 date: 2026-04-18
 breadcrumb: "Zentity"
 keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "Proxmox OpenShift produkce", "OpenTelemetry Beyla implementace", "ArgoCD GitOps reference", "DevOps implementace Česká republika"]
@@ -10,7 +10,7 @@ keywords: ["OpenShift Proxmox case study", "OpenShift implementace reference", "
 <div class="lp-hero-content">
 {{< breadcrumb >}}
 <div class="cs-tag">Case Study</div>
-<h1>Zentity: Moderní infrastruktura<br/>na klíč pro rok 2026</h1>
+<h1>Zentity: OpenShift na Proxmox<br/>jako infrastruktura na klíč</h1>
 <p class="lp-hero-sub">Kompletní transformace infrastruktury — od bare-metal po produkční OpenShift cluster s plnou observabilitou a GitOps workflow.</p>
 </div>
 </section>

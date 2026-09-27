@@ -49,7 +49,7 @@ keywords: ["Proxmox implementace", "Proxmox VE cluster", "migrace VMware Proxmox
 
 <section class="lp-section lp-dark">
 <div class="lp-container">
-<h2>Proč přejít z VMware na Proxmox v 2026?</h2>
+<h2>Proč přejít z VMware na Proxmox?</h2>
 <div class="lp-grid-2">
 <div>
 <ul class="lp-list">
