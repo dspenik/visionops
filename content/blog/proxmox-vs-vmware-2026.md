@@ -48,7 +48,7 @@ Proxmox VE 9.x přináší funkčnost srovnatelnou s VMware vSphere:
 | Položka | VMware vSphere | Proxmox VE |
 |---------|---------------|------------|
 | Licence | Roční předplatné, tisíce € / CPU | Open-source, zdarma |
-| Podpora | Zahrnuta v ceně | Volitelná, za CPU socket: od 120 €/rok (Community), produkční od 370 €/rok |
+| Podpora | Zahrnuta v ceně | Volitelná placená subskripce za CPU socket; bez ní je k dispozici no-subscription repozitář |
 | Funkce HA | Vyžaduje higher tier | Zdarma ve všech verzích |
 | vSAN / Ceph | Drahý add-on | Ceph integrován zdarma |
 
