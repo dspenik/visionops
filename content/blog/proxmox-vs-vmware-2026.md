@@ -18,7 +18,7 @@ keywords: ["proxmox", "vmware", "virtualizace", "migrace", "openshift", "kuberne
 
 ## Situace na trhu v roce 2026
 
-Broadcom po akvizici VMware přešel na nový licenční model. Tradiční perpetuální licence zmizely, zůstaly jen roční předplatné balíčky. Výsledek? Ceny vzrostly pro většinu zákazníků 3–10× a mnoho malých a středních firem přišlo o přístup k funkcím jako vSphere HA nebo Distributed Resource Scheduler, které byly dříve dostupné ve standard edici.
+Broadcom po akvizici VMware přešel na nový licenční model. Tradiční perpetuální licence zmizely, zůstaly jen roční předplatné balíčky. Mnoho malých a středních firem navíc přišlo o přístup k funkcím jako vSphere HA nebo Distributed Resource Scheduler, které byly dříve dostupné ve standard edici.
 
 Výsledkem je masivní zájem o alternativy. Proxmox VE — open-source hypervisor postavený na KVM a LXC — se stal jasnou volbou č. 1 pro firmy, které chtějí enterprise funkčnost bez enterprise licenčních nákladů.
 
