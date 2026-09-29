@@ -9,9 +9,9 @@ keywords: ["opentelemetry", "beyla", "ebpf", "observability", "monitoring", "ope
 <article class="blog-article">
 <div class="blog-header">
 {{< breadcrumb >}}
-<div class="blog-meta">18. dubna 2026 · 10 min čtení</div>
+<div class="blog-meta">18. dubna 2026 · 10 min čtení · ověřeno podle aktuální dokumentace 29. září 2026</div>
 <h1>OpenTelemetry + Beyla:<br/>monitoring bez změny kódu v roce 2026</h1>
-<p class="blog-perex">Největší překážka nasazení observability byl vždy požadavek na instrumentaci kódu. Grafana Beyla mění pravidla hry — eBPF auto-instrumentace přináší traces a RED metriky z jakékoli aplikace bez jediného řádku změn. Přinášíme praktický návod na kompletní observability stack 2026.</p>
+<p class="blog-perex">Největší překážka nasazení observability byl vždy požadavek na instrumentaci kódu. Grafana Beyla to mění — eBPF auto-instrumentace přináší traces a RED metriky z jakékoli aplikace bez jediného řádku změn. Přinášíme praktický návod na kompletní observability stack 2026.</p>
 </div>
 
 <div class="blog-content">
@@ -24,7 +24,7 @@ Ještě v roce 2023 bylo nasazení kompletní observability (metriky + logy + tr
 2. **Grafana Beyla** jako eBPF auto-instrumentace bez změn kódu
 3. **Grafana LGTM stack** (Loki, Grafana, Tempo, Mimir) jako integrovaná platforma
 
-Výsledkem je observability stack, který lze nasadit za dny místo měsíců.
+Výsledkem je observability stack, který lze nasadit výrazně rychleji než dřív.
 
 ## OpenTelemetry Collector: centrální telemetry pipeline
 
@@ -38,7 +38,7 @@ kind: OpenTelemetryCollector
 metadata:
   name: otel-collector
 spec:
-  mode: DaemonSet
+  mode: deployment
   config:
     receivers:
       otlp:
@@ -57,14 +57,17 @@ spec:
       batch:
         timeout: 1s
       memory_limiter:
+        check_interval: 1s
         limit_mib: 512
     exporters:
       prometheusremotewrite:
         endpoint: http://prometheus:9090/api/v1/write
-      otlphttp/loki:
+      otlp_http/loki:
         endpoint: http://loki:3100/otlp
-      otlp/tempo:
-        endpoint: http://tempo:4317
+      otlp_grpc/tempo:
+        endpoint: tempo:4317
+        tls:
+          insecure: true
     service:
       pipelines:
         metrics:
@@ -74,24 +77,26 @@ spec:
         logs:
           receivers: [otlp]
           processors: [batch]
-          exporters: [otlphttp/loki]
+          exporters: [otlp_http/loki]
         traces:
           receivers: [otlp]
           processors: [batch]
-          exporters: [otlp/tempo]
+          exporters: [otlp_grpc/tempo]
 ```
+
+Collector běží jako Deployment, aby Prometheus receiver nescrapoval stejné pody z každého nodu. Operator k němu vytvoří Service `otel-collector-collector`. Prometheus receiver s `kubernetes_sd_configs` potřebuje ServiceAccount s právy list/watch na pody a Prometheus musí mít zapnutý příjem remote write (`--web.enable-remote-write-receiver`).
 
 ## Grafana Beyla: eBPF auto-instrumentace
 
-Beyla je revoluce v aplikačním monitoringu. Využívá eBPF (extended Berkeley Packet Filter) pro interceptování síťových volání na úrovni kernelu — bez agenta v aplikaci, bez změn kódu, bez restartu.
+Beyla výrazně mění aplikační monitoring. Využívá eBPF (extended Berkeley Packet Filter) — sondy na úrovni kernelu i uprobes v aplikačních binárkách — bez agenta v aplikaci, bez změn kódu, bez restartu. Vyžaduje Linux kernel 5.8+ s BTF, případně RHEL 8 a odvozené distribuce s backportovaným eBPF.
 
-Jádro Beyly Grafana v roce 2025 darovala projektu OpenTelemetry, kde pokračuje jako OpenTelemetry eBPF Instrumentation (OBI). Beyla zůstává distribucí OBI od Grafany, takže postup níže platí pro obě varianty.
+Jádro Beyly Grafana v roce 2025 darovala projektu OpenTelemetry, kde pokračuje jako OpenTelemetry eBPF Instrumentation (OBI). Beyla zůstává distribucí OBI od Grafany a obě používají stejné YAML schéma konfigurace; proměnné prostředí OBI ale mají prefix `OTEL_EBPF_` místo `BEYLA_`.
 
 ### Co Beyla monitoruje automaticky
 
 - **HTTP/HTTPS** — všechny příchozí a odchozí requesty s latencí, status kódy, URL patterny
 - **gRPC** — service-to-service komunikace s method-level granularitou
-- **SQL** — databázové dotazy s latencí a identifikací slow queries
+- **SQL** — databázové dotazy (PostgreSQL, MySQL, MSSQL) s latencí
 - **Redis** — cache operace
 - **Kafka** — producer/consumer messaging
 
@@ -102,68 +107,84 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: beyla
+  labels:
+    app: beyla
 spec:
   selector:
     matchLabels:
       app: beyla
   template:
+    metadata:
+      labels:
+        app: beyla
     spec:
+      serviceAccountName: beyla
       hostPID: true
       containers:
       - name: beyla
         image: grafana/beyla:latest
-        securityContext:
-          privileged: true
         env:
-        - name: BEYLA_OPEN_PORT
-          value: "80,443,8080,8443"
+        - name: BEYLA_AUTO_TARGET_EXE
+          value: "*/my-app"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          value: "http://otel-collector:4317"
-        - name: BEYLA_TRACE_PRINTER
-          value: "text"
+          value: "http://otel-collector-collector:4317"
+        - name: BEYLA_KUBE_METADATA_ENABLE
+          value: "true"
+        securityContext:
+          runAsUser: 0
+          readOnlyRootFilesystem: true
+          capabilities:
+            add: [BPF, SYS_PTRACE, NET_RAW, CHECKPOINT_RESTORE, DAC_READ_SEARCH, PERFMON, SYS_ADMIN]
+            drop: [ALL]
         volumeMounts:
-        - name: host-proc
-          mountPath: /host/proc
+        - name: var-run-beyla
+          mountPath: /var/run/beyla
+        - name: cgroup
+          mountPath: /sys/fs/cgroup
+        - name: tracefs
+          mountPath: /sys/kernel/tracing
       volumes:
-      - name: host-proc
+      - name: var-run-beyla
+        emptyDir: {}
+      - name: cgroup
         hostPath:
-          path: /proc
+          path: /sys/fs/cgroup
+      - name: tracefs
+        hostPath:
+          path: /sys/kernel/tracing
 ```
 
-**Poznámka pro OpenShift:** Beyla vyžaduje privileged SCC nebo specifická capabilities — `SYS_ADMIN`, `SYS_PTRACE`, `NET_ADMIN`. Na OpenShift je nutné přidat odpovídající SecurityContextConstraints.
+V DaemonSet režimu se aplikace vybírají podle názvu spustitelného souboru (`BEYLA_AUTO_TARGET_EXE`), protože porty jsou uvnitř podů. Kubernetes metadata (`BEYLA_KUBE_METADATA_ENABLE`) vyžadují ServiceAccount `beyla` s právy číst pody a další objekty clusteru.
+
+**Poznámka pro OpenShift:** výchozí SCC neumožňuje přístup k hostiteli, UID 0 ani potřebné capabilities. Podle dokumentace Beyly vytvořte vlastní SCC s `allowHostPID`, `allowHostDirVolumePlugin`, `runAsUser: MustRunAs` (UID 0), capabilities výše plus `NET_ADMIN` a `allowPrivilegedContainer: false`, a přidělte ji jen ServiceAccountu Beyly: `oc adm policy add-scc-to-user beyla -z beyla -n <namespace>`.
 
 ## AI-assisted monitoring: od alertů k předvídání
 
-### Grafana Machine Learning
+### Grafana Cloud Machine Learning
 
-Grafana ML (dostupná v Grafana Cloud i on-premise přes plugin) přidává:
+Machine learning v Grafana Cloud přidává:
 
 **Anomaly detection** — místo statických threshold alertů (CPU > 80%) se učí normální chování metriky a alertuje na odchylky od baseline. Výsledek: méně false positives, lepší signal-to-noise ratio.
 
-**Forecasting** — predikce budoucích hodnot metrik pro kapacitní plánování. Otázka "kdy nám dojde disk?" má konkrétní odpověď s intervalem spolehlivosti.
+**Forecasting** — predikce budoucích hodnot metrik pro kapacitní plánování. Otázka "kdy nám dojde disk?" má konkrétní odpověď s intervalem predikce.
 
 ### Implementace v Prometheus recording rules
 
-Pro jednodušší AI monitoring bez Grafana ML lze využít Prometheus recording rules s exponential smoothing:
+Bez Grafana Cloud lze jednoduchou detekci odchylek postavit na Prometheus recording rule a porovnání s klouzavým průměrem za 24 hodin:
 
 ```yaml
 groups:
 - name: anomaly_detection
   rules:
-  - record: job:http_request_duration_seconds:rate5m_avg
-    expr: avg_over_time(http_request_duration_seconds_bucket[1h])
-  
+  - record: job:http_request_duration_seconds:mean5m
+    expr: |
+      sum by (job) (rate(http_request_duration_seconds_sum[5m]))
+      / sum by (job) (rate(http_request_duration_seconds_count[5m]))
+
   - alert: LatencyAnomaly
     expr: |
-      (
-        rate(http_request_duration_seconds_sum[5m])
-        / rate(http_request_duration_seconds_count[5m])
-      ) > (
-        avg_over_time(
-          (rate(http_request_duration_seconds_sum[5m])
-          / rate(http_request_duration_seconds_count[5m]))[24h:5m]
-        ) * 2
-      )
+      job:http_request_duration_seconds:mean5m
+      > avg_over_time(job:http_request_duration_seconds:mean5m[24h]) * 2
     labels:
       severity: warning
     annotations:
@@ -175,9 +196,9 @@ groups:
 ```
 Aplikace (bez změn kódu)
         ↓
-  Grafana Beyla (eBPF)
+  Grafana Beyla (eBPF)  +  logy aplikací (OTLP)
         ↓
-OpenTelemetry Collector (DaemonSet)
+OpenTelemetry Collector (Deployment)
         ↓
   ┌─────┬──────┬──────┐
   │     │      │      │
@@ -197,9 +218,9 @@ Tento stack provozujeme na [OpenShift clusteru pro Zentity](/reference/zentity-o
 
 ## Závěr
 
-Observability stack 2026 je signifikantně přístupnější než před dvěma lety. OpenTelemetry jako standard eliminuje vendor lock-in, Beyla odstraňuje nutnost instrumentace kódu a Grafana LGTM stack poskytuje integrovanou platformu pro všechny tři pilíře observability.
+Observability stack 2026 je výrazně přístupnější než před dvěma lety. OpenTelemetry jako standard eliminuje vendor lock-in, Beyla odstraňuje nutnost instrumentace kódu a Grafana LGTM stack poskytuje integrovanou platformu pro všechny tři pilíře observability.
 
-Pro Kubernetes a OpenShift prostředí doporučujeme tento stack jako výchozí bod — je open-source, škálovatelný a pokryje 90% potřeb i největších produkčních prostředí. Co zahrnuje naše [nasazení monitoringu a observability](/sluzby/monitoring-observability/), najdete na stránce služby.
+Pro Kubernetes a OpenShift prostředí doporučujeme tento stack jako výchozí bod — je open-source, škálovatelný a pokryje většinu běžných potřeb produkčních prostředí. Co zahrnuje naše [nasazení monitoringu a observability](/sluzby/monitoring-observability/), najdete na stránce služby.
 
 </div>
 
