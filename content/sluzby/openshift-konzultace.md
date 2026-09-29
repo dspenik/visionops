@@ -9,6 +9,7 @@ keywords: ["openshift", "kubernetes", "argocd", "gitops", "proxmox", "observabil
 <section class="lp-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
+<div class="blog-meta">Ověřeno podle aktuální dokumentace 29. září 2026</div>
 <h1>OpenShift konzultace<br/>a implementace</h1>
 <p class="lp-hero-sub">Produkční Red Hat OpenShift clustery on-premise i v cloudu. Od návrhu architektury po předání provozu.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
@@ -25,11 +26,11 @@ keywords: ["openshift", "kubernetes", "argocd", "gitops", "proxmox", "observabil
 </div>
 <div class="lp-card">
 <h3>Instalace a konfigurace</h3>
-<p>Full-stack instalace OpenShift na bare-metal nebo <a href="/sluzby/proxmox-virtualizace/">Proxmox VE cluster</a>, konfigurace identity provideru, RBAC, síťových politik a image registry.</p>
+<p>Kompletní instalace OpenShift na bare-metal nebo <a href="/sluzby/proxmox-virtualizace/">Proxmox VE cluster</a>, konfigurace identity provideru, RBAC, síťových politik a image registry.</p>
 </div>
 <div class="lp-card">
 <h3>GitOps s ArgoCD</h3>
-<p>Nasazení ArgoCD, nastavení App of Apps patternu, synchronizace aplikací z Git repozitářů, canary a blue-green deployment strategie. Více u služby <a href="/sluzby/cicd-gitops/">CI/CD automatizace a GitOps</a>.</p>
+<p>Nasazení ArgoCD, nastavení App of Apps patternu, synchronizace aplikací z Git repozitářů, canary a blue-green deployment přes Argo Rollouts. Více u služby <a href="/sluzby/cicd-gitops/">CI/CD automatizace a GitOps</a>.</p>
 </div>
 <div class="lp-card">
 <h3>CI/CD pipelines</h3>
@@ -53,9 +54,9 @@ keywords: ["openshift", "kubernetes", "argocd", "gitops", "proxmox", "observabil
 <div class="lp-grid-2">
 <div>
 <ul class="lp-list">
-<li><strong>Enterprise ready od první minuty</strong> — integrovaný image registry, OAuth, logging stack a monitoring bez nutnosti skládat ho z komponent</li>
-<li><strong>Security by default</strong> — rootless kontejnery, SCC, automatické TLS certifikáty, integrovaný audit log</li>
-<li><strong>Stabilní update cyklus</strong> — over-the-air clusteru update přes Operator Lifecycle Manager, nulový downtime při správném nastavení</li>
+<li><strong>Enterprise ready od první minuty</strong> — integrovaný image registry, OAuth a monitoring, logging jako podporovaný Operator (Red Hat OpenShift Logging)</li>
+<li><strong>Security by default</strong> — kontejnery běží jako non-root s náhodným UID (SCC restricted-v2), automatické interní TLS certifikáty, integrovaný audit log</li>
+<li><strong>Stabilní update cyklus</strong> — over-the-air update clusteru včetně RHCOS přes Cluster Version Operator, rolling update bez výpadku aplikací při správně nastavených replikách a PodDisruptionBudget</li>
 <li><strong>Hybridní cloud</strong> — stejná platforma on-premise (bare-metal, Proxmox) i v cloudu (Azure Red Hat OpenShift, ROSA)</li>
 </ul>
 </div>
