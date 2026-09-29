@@ -9,6 +9,7 @@ keywords: ["openshift", "proxmox", "argocd", "gitops", "gitlab", "ansible", "ope
 <section class="lp-hero cs-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
+<div class="blog-meta">Ověřeno podle aktuální dokumentace 29. září 2026</div>
 <div class="cs-tag">Case Study</div>
 <h1>Zentity: OpenShift na Proxmox<br/>jako infrastruktura na klíč</h1>
 <p class="lp-hero-sub">Kompletní transformace infrastruktury — od bare-metal po produkční OpenShift cluster s plnou observabilitou a GitOps workflow.</p>
@@ -92,7 +93,7 @@ keywords: ["openshift", "proxmox", "argocd", "gitops", "gitlab", "ansible", "ope
 <li>GitLab CE instalace na dedikovaném VM</li>
 <li>GitLab CI runnery integrované s OpenShift</li>
 <li>Container registry pro build artefakty</li>
-<li>Příprava CI pipeline pro automatický build a push do ArgoCD</li>
+<li>Příprava CI pipeline pro automatický build image a aktualizaci GitOps repozitáře, který ArgoCD synchronizuje</li>
 <li>Branch protection a merge request workflow</li>
 </ul>
 </div>
