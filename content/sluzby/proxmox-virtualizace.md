@@ -9,6 +9,7 @@ keywords: ["proxmox", "vmware", "virtualizace", "migrace", "ceph", "openshift"]
 <section class="lp-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
+<div class="blog-meta">Ověřeno podle aktuální dokumentace 29. září 2026</div>
 <h1>Proxmox VE cluster<br/>a migrace z VMware</h1>
 <p class="lp-hero-sub">Open-source enterprise virtualizace bez licenčních poplatků. Kompletní implementace Proxmox clusteru s vysokou dostupností a zálohováním.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
@@ -53,9 +54,9 @@ keywords: ["proxmox", "vmware", "virtualizace", "migrace", "ceph", "openshift"]
 <div class="lp-grid-2">
 <div>
 <ul class="lp-list">
-<li><strong>Dramatické snížení nákladů</strong> — po akvizici Broadcomem zdražily VMware licence 3–10x. Proxmox VE je open-source, platí se jen volitelná podpora. Podrobné srovnání přináší článek <a href="/blog/proxmox-vs-vmware-2026/">Proxmox vs VMware: proč firmy migrují</a></li>
+<li><strong>Nižší licenční náklady</strong> — po akvizici Broadcomem přešel VMware na předplatné licencované per core. Proxmox VE je open-source, platí se jen volitelná podpora. Podrobné srovnání přináší článek <a href="/blog/proxmox-vs-vmware-2026/">Proxmox vs VMware: proč firmy migrují</a></li>
 <li><strong>Žádný vendor lock-in</strong> — standardní KVM hypervisor, kompatibilní s existujícími nástroji (Terraform, Ansible, Packer)</li>
-<li><strong>Aktivní vývoj</strong> — Proxmox VE 9.x rozšiřuje SDN a přidává dynamický load balancing přes Cluster Resource Scheduler</li>
+<li><strong>Aktivní vývoj</strong> — Proxmox VE 9.x rozšiřuje SDN a přidává dynamický load balancing HA-spravovaných VM přes Cluster Resource Scheduler</li>
 <li><strong>Plná enterprise funkčnost</strong> — HA clustering, live migration, snapshoty, replikace, integrovaný firewall a zálohovací server</li>
 <li><strong>Ideální základ pro OpenShift/Kubernetes</strong> — ověřená kombinace Proxmox + OpenShift v produkčních prostředích</li>
 </ul>
