@@ -9,6 +9,7 @@ keywords: ["cicd", "gitops", "argocd", "gitlab", "tekton", "iac", "kubernetes"]
 <section class="lp-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
+<div class="blog-meta">Ověřeno podle aktuální dokumentace 29. září 2026</div>
 <h1>CI/CD automatizace<br/>a GitOps</h1>
 <p class="lp-hero-sub">Od commitu po produkci plně automatizovaně. ArgoCD, GitLab CI, Tekton a Infrastructure as Code jako základ moderního DevOps.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
@@ -29,7 +30,7 @@ keywords: ["cicd", "gitops", "argocd", "gitlab", "tekton", "iac", "kubernetes"]
 </div>
 <div class="lp-card">
 <h3>Tekton pipelines</h3>
-<p>Cloud-native CI/CD přímo v Kubernetes. Definice pipeline tasks, reusable ClusterTasks, Tekton Triggers pro event-driven automatizaci a Tekton Chains pro supply chain security.</p>
+<p>Cloud-native CI/CD přímo v Kubernetes. Definice pipeline tasks, sdílené Tasks přes Tekton resolvery (cluster, bundles, git), Tekton Triggers pro event-driven automatizaci a Tekton Chains pro supply chain security.</p>
 </div>
 <div class="lp-card">
 <h3>Infrastructure as Code</h3>
@@ -37,7 +38,7 @@ keywords: ["cicd", "gitops", "argocd", "gitlab", "tekton", "iac", "kubernetes"]
 </div>
 <div class="lp-card">
 <h3>Deployment strategie</h3>
-<p>Blue-green deployments, canary releases s postupným navyšováním traffic, automatizované rollbacky při selhání health checks. Zero-downtime deployments jako standard.</p>
+<p>Blue-green deployments a canary releases s postupným navyšováním traffic (Argo Rollouts), automatizované rollbacky při selhání health checks. Zero-downtime deployments jako standard.</p>
 </div>
 <div class="lp-card">
 <h3>Security v pipeline</h3>
@@ -55,8 +56,8 @@ keywords: ["cicd", "gitops", "argocd", "gitlab", "tekton", "iac", "kubernetes"]
 <ul class="lp-list">
 <li><strong>Git jako jediný zdroj pravdy</strong> — stav produkce je vždy přesně to, co je v Gitu. Žádné ruční změny, žádné drift konfigurace</li>
 <li><strong>Auditovatelnost</strong> — každá změna v infrastruktuře má commit, autora, review a timestamp. Compliance ready od začátku</li>
-<li><strong>Rychlé rollbacky</strong> — revert commitu = okamžitý rollback celého prostředí, včetně infrastruktury</li>
-<li><strong>Self-healing</strong> — ArgoCD detekuje odchylky od desired state a automaticky je opravuje</li>
+<li><strong>Rychlé rollbacky</strong> — revert commitu = rychlý návrat deklarované konfigurace aplikací i infrastruktury spravované z Gitu</li>
+<li><strong>Self-healing</strong> — ArgoCD detekuje odchylky od desired state a při zapnutém auto-sync se selfHeal je automaticky opravuje</li>
 <li><strong>Multi-environment</strong> — Staging, UAT a produkce jako oddělené větve nebo adresáře, promotions přes PR</li>
 </ul>
 </div>
