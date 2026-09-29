@@ -9,8 +9,9 @@ keywords: ["monitoring", "observability", "opentelemetry", "beyla", "prometheus"
 <section class="lp-hero">
 <div class="lp-hero-content">
 {{< breadcrumb >}}
+<div class="blog-meta">Ověřeno podle aktuální dokumentace 29. září 2026</div>
 <h1>Monitoring infrastruktury<br/>a observability</h1>
-<p class="lp-hero-sub">Kompletní přehled nad celým stackem — metriky, logy, traces, profiling. OpenTelemetry, Beyla eBPF a AI-assisted monitoring jako nový standard.</p>
+<p class="lp-hero-sub">Kompletní přehled nad celým stackem — metriky, logy a traces. OpenTelemetry, Beyla eBPF a AI-assisted monitoring jako nový standard.</p>
 <a href="mailto:info@visionops.cz" class="cta-button">Nezávazná konzultace →</a>
 </div>
 </section>
@@ -41,10 +42,10 @@ keywords: ["monitoring", "observability", "opentelemetry", "beyla", "prometheus"
 <div class="lp-grid-2">
 <div>
 <h3>OpenTelemetry jako standard</h3>
-<p>OpenTelemetry Collector jako vendor-neutral pipeline pro metriky, logy a traces. Jeden agent, veškerá telemetrie — bez vendor lock-in. Automatická instrumentace pro Java, Python, Go, Node.js a další jazyky.</p>
+<p>OpenTelemetry Collector jako vendor-neutral pipeline pro metriky, logy a traces. Jedna pipeline pro veškerou telemetrii — bez vendor lock-in. Automatická instrumentace pro Java, Python, Go, Node.js a další jazyky.</p>
 <br/>
 <h3>Beyla — eBPF bez změny kódu</h3>
-<p>Grafana Beyla využívá eBPF technologii pro auto-instrumentaci aplikací bez nutnosti měnit kód nebo restartovat služby. HTTP, gRPC, SQL traces automaticky — ideální pro legacy aplikace bez OpenTelemetry SDK. Postup krok za krokem popisujeme v článku <a href="/blog/opentelemetry-beyla-monitoring-2026/">OpenTelemetry + Beyla: monitoring bez změny kódu</a>.</p>
+<p>Grafana Beyla využívá eBPF technologii pro auto-instrumentaci aplikací bez nutnosti měnit kód nebo restartovat služby. HTTP, gRPC, SQL traces automaticky — ideální pro legacy aplikace bez OpenTelemetry SDK (vyžaduje Linux kernel 5.8+ s BTF, nebo RHEL 8). Postup krok za krokem popisujeme v článku <a href="/blog/opentelemetry-beyla-monitoring-2026/">OpenTelemetry + Beyla: monitoring bez změny kódu</a>.</p>
 </div>
 <div>
 <div class="lp-tech-stack">
@@ -73,15 +74,15 @@ keywords: ["monitoring", "observability", "opentelemetry", "beyla", "prometheus"
 <div class="lp-grid-2">
 <div class="lp-card">
 <h3>Anomaly detection</h3>
-<p>Grafana Machine Learning a Prometheus recording rules pro detekci anomálií v metrikách. Automatické alerting thresholds na základě historických dat místo statických hodnot.</p>
+<p>Grafana Cloud Machine Learning a Prometheus recording rules pro detekci anomálií v metrikách. Automatické alerting thresholds na základě historických dat místo statických hodnot.</p>
 </div>
 <div class="lp-card">
 <h3>Intelligent alerting</h3>
-<p>Redukce alert fatigue přes AI-assisted korelaci alertů. Skupinování příbuzných incidentů, root cause analysis a inteligentní routing na základě kontextu.</p>
+<p>Redukce alert fatigue přes seskupování a inhibici alertů v Alertmanageru a routing podle kontextu. V Grafana Cloud navíc Sift pro hledání příčin incidentů.</p>
 </div>
 <div class="lp-card">
 <h3>Prediktivní kapacitní plánování</h3>
-<p>Analýza trendů spotřeby zdrojů, předpověď kapacitních potřeb, automatická doporučení pro scaling — vše na základě historických dat z Prometheus nebo Thanos.</p>
+<p>Analýza trendů spotřeby zdrojů, předpověď kapacitních potřeb, podklady pro scaling — vše na základě historických dat z Prometheus nebo Thanos.</p>
 </div>
 <div class="lp-card">
 <h3>Aplikační monitoring</h3>
